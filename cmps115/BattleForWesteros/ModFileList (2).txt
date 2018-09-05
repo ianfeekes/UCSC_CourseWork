@@ -1,0 +1,35 @@
+     |                       |                                          |
+*num | *File names           |   *Mod commit                            | *Author/ Date
+_____|_______________________|__________________________________________|_______________
+ 1)  | Main2Activity.java    | New Background, button->ImageButton      | Joe / 7.19.18
+     |                       |                                          |
+ 2)  | MapManager.java       | add 1 int variable to handle currentMap  | Joe / 7.19.18
+     |                       |                                          |
+ 3)  | Tiles.java            | create outer ArrayList to Hold Map       | Joe / 7.19.18
+     |                       |                                          |
+ 4)  | ImgCastle.java        | New Class to edit img of castle          | Joe / 7.19.18
+     |                       |                                          |
+ 5)  | RectEnemy.java        |  Class to edit img of enemy           | Joe / 7.19.18
+     |                       |                                          |
+ 6)  | GamePanel             | Little Change as needed                  | Joe / 7.19.18
+     |                       |                                          |
+ 7)  | Severals Images       | enemy, background(MainAct2), castle, maga| Joe / 7.19.18
+
+
+
+/*Discription:
+ * Rigt now we have 1 dungeon with 2 screen: it's pretty easy 2 add more screens now;
+   Marga's implemented (player momvent range) is available, but no combat system yet.
+   I suggest enemy(combat system) developer read MapManager first and figure what's
+   going on.
+
+ * Second Activity.mxl has been mod: Background, button change to imagebutton
+ * Main2Activity.java has been mod: becuz the change of 2nd Act.mxl
+ 
+ * Mapmange.java: Now we maps have been created. Used an ArrayList to handle each map
+                 add 1 more int variable to determine the page of map.
+                 add 1 more ArrayList<ArrayList<Tile>>  
+
+ * GamePanel.java: add 1 int variable, some functions from MapManager have been changed
+		   for example, Constructor(Content, int pageNumber)
+ */
