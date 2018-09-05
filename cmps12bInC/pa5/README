@@ -1,0 +1,7 @@
+This directory contains the following as part of Charlie McDowell's UCSC CMPS12B programming assignment#5:
+	-README
+	-Dictionary.c
+	-Dictionary.h
+	-DictionaryTest.c
+	-DictionaryClient.C
+	-Makefile

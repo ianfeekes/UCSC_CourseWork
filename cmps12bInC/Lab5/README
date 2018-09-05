@@ -1,0 +1,8 @@
+This is Lab5 from CMPS12B, written in C. 
+It contains the following files: 
+	-README
+	-Makefile
+	-Dictionary.c
+	-DictionaryTest.c
+	-Dictionary.h
+	-DictionaryClient.c
