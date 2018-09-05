@@ -1,0 +1,21 @@
+/afs/cats.ucsc.edu/users/n/ifeekes/cs11/lab2
+
+Access list for public is
+Normal rights:
+  system:operator rlidwk
+  system:authuser rlid
+  system:anyuser rl
+  ifeekes rlidwka
+
+Access list for private is
+Normal rights:
+  ifeekes rlidwka
+
+total 7
+-rw-r--r--. 1 ifeekes users  426 Jan 17 14:22 HelloWorld.class
+drwxr-xr-x. 2 ifeekes users 2048 Jan 17 13:58 private
+-rwx------. 1 ifeekes users  204 Jan 17 14:32 prog
+drwxr-xr-x. 2 ifeekes users 2048 Jan 17 13:57 public
+-rw-r--r--. 1 ifeekes users  235 Jan 17 14:32 result
+
+Hello, lab2!

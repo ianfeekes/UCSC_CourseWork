@@ -1,0 +1,70 @@
+Script started on Mon 06 Aug 2018 02:34:24 PM PDT
+[?1034hbash-4.2$  ../cix localhost 8888
+cix(2212): starting
+cix(2212): unix2.lt.ucsc.edu (128.114.104.55)
+cix(2212): connecting to localhost port 8888
+cix(2212): connected to localhost (127.0.0.1) port 8888
+ls
+cix(2212): command ls
+cix(2212): sending header {0,CIX_LS=4,""}
+cix(2212): received header {285,CIX_LSOUT=8,""}
+cix(2212): received 285 bytes
+total 1156
+-rwxr-xr-x 1 ifeekes users 660728 Aug  6 14:28 cix
+-rwxr-xr-x 1 ifeekes users 519336 Aug  6 14:28 cixd
+-rw-r--r-- 1 ifeekes users      0 Aug  6 14:31 daemon.log1
+-rw------- 1 ifeekes users    858 Aug  6 14:26 server1
+-rw------- 1 ifeekes users    280 Aug  6 14:26 to-remove
+ls
+cix(2212): command ls
+cix(2212): sending header {0,CIX_LS=4,""}
+cix(2212): received header {398,CIX_LSOUT=8,""}
+cix(2212): received 398 bytes
+total 1158
+-rwxr-xr-x 1 ifeekes users 660728 Aug  6 14:28 cix
+-rwxr-xr-x 1 ifeekes users 519336 Aug  6 14:28 cixd
+-rw-r--r-- 1 ifeekes users      0 Aug  6 14:31 daemon.log1
+-rw-r--r-- 1 ifeekes users    516 Aug  6 14:35 localfile
+-rw-r--r-- 1 ifeekes users    644 Aug  6 14:36 localtto
+-rw------- 1 ifeekes users    858 Aug  6 14:26 server1
+-rw------- 1 ifeekes users    280 Aug  6 14:26 to-remove
+get server1
+cix(2212): command get
+cix(2212): sending header {0,CIX_GET=2,"server1"}
+cix(2212): received header {858,CIX_FILE=7,""}
+cix(2212): received 858 bytes
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+This is a remote server file.
+Originally it was only in the remote directory.
+exit
+cix(2212): command exit
+cix(2212): caught cix_exit
+cix(2212): finishing
+bash-4.2$ get localfile
+bash: get: command not found
+bash-4.2$ ls
+client2.log2  server1
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+client2.log2  server1
+bash-4.2$ vim l[Kclient2.lgo[K[Kog2
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"client2.log2" 0L, 0C[>c[2;1H[94m~                                                                                                                                                                                  [3;1H~                                                                                                                                                                                  [4;1H~                                                                                                                                                                                  [5;1H~                                                                                                                                                                                  [6;1H~                                                                                                                                                                                  [7;1H~                                                                                                                                                                                  [8;1H~                                                                                                                                                                                  [9;1H~                                                                                                                                                                                  [10;1H~                                                                                                                                                                                  [11;1H~                                                                                                                                                                                  [12;1H~                                                                                                                                                                                  [13;1H~                                                                                                                                                                                  [14;1H~                                                                                                                                                                                  [15;1H~                                                                                                                                                                                  [16;1H~                                                                                                                                                                                  [17;1H~                                                                                                                                                                                  [18;1H~                                                                                                                                                                                  [19;1H~                                                                                                                                                                                  [20;1H~                                                                                                                                                                                  [21;1H~                                                                                                                                                                                  [22;1H~                                                                                                                                                                                  [23;1H~                                                                                                                                                                                  [24;1H~                                                                                                                                                                                  [25;1H~                                                                                                                                                                                  [26;1H~                                                                                                                                                                                  [27;1H~                                                                                                                                                                                  [28;1H~                                                                                                                                                                                  [29;1H~                                                                                                                                                                                  [30;1H~                                                                                                                                                                                  [31;1H~                                                                                 

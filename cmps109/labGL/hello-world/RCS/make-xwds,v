@@ -1,0 +1,53 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2018.06.27.22.51.46;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2016.06.30.22.09.31;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: make-xwds,v 1.1 2016-06-30 15:09:31-07 - - $
+for i in bonjour-le-monde ciao-mondo hallo-welt hello-world
+do
+   $i
+   xwd -frame -out $i.xwd
+   convert $i.xwd $.xwd.ps
+done
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id$
+d5 1
+a5 1
+   $i&
+d7 1
+a7 1
+   convert $i.xwd $.ps
+@

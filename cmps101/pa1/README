@@ -1,0 +1,6 @@
+Written by Ian Feekes, ifeekes@ucsc.edu, #1474914. 
+List.java contains specifications for the features and the functions of the double linked list
+Lex.java takes in input and output files and arrange lines in alphabetic order
+MAKEFILE allows us to run the files all together with easy commands
+ListClient.java allows running for testing and manipulation of our list
+

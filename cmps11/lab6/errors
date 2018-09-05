@@ -1,0 +1,16 @@
+//Ian Feekes
+//#1474914
+//Cmps 11
+//Lab 6
+//Errors
+//Contains all the errors found in LetterHome.class through testing the outputs
+
+
+
+//2 4 gives an output of hot rather than cold
+//3 3 gives an output of "last weekend" rather than "next weekend" which doesn't really syntactically make sense
+//The program will regurgitate sentence code, which is weird for letter formatting eg the student can keep talking about the weather with different descriptions
+//Extra sentences can be added to the letter, which is awkward because it means there will be redundancies
+//The user can ask for no money, which is a bit strange; should just skip the sentence altogether if 0 is inputted
+//The user can ask for a negative amount of money, which is a bit strange, and doesn't work with the formatting of the letter
+//There does not appear to be a limit of the money one can ask for, and no parent will believe their kid needs 1000000$ for books

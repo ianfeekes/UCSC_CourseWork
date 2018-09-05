@@ -1,0 +1,16 @@
+Ian Feekes
+ifeekes
+#1474914
+asg4 
+Note to Graders: Often the script files open to blank files the first
+several times you try to vim into them. May take a few attempts to open. 
+Apologies, I couldn't fix this issue. 
+All work on this assignment done independently (no partner) 
+Files to be submitted include: 
+-cix.cpp 
+-cixd.cpp
+-logstream.h 
+-Makefile/.dep
+-protocol.h
+-protocol.cpp
+-sockets.cpp/h

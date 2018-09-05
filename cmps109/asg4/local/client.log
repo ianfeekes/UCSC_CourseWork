@@ -1,0 +1,369 @@
+Script started on Wed 08 Aug 2018 01:39:51 PM PDT
+[?1034hbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ [Kbash-4.2$ .[K../cix localhsot 8888
+cix(24623): starting
+cix(24623): unix2.lt.ucsc.edu (128.114.104.55)
+cix(24623): connecting to localhsot port 8888
+cix(24623): gethostbyname(localhsot): Unknown host
+cix(24623): finishing
+bash-4.2$ ../cix localhost 8888
+cix(26027): starting
+cix(26027): unix2.lt.ucsc.edu (128.114.104.55)
+cix(26027): connecting to localhost port 8888
+cix(26027): connected to localhost (127.0.0.1) port 8888
+ls
+cix(26027): command ls
+cix(26027): sending header {0,4(LS),""}
+cix(26027): received header {165,8(LSOUT),""}
+cix(26027): received 165 bytes
+total 2
+-rw-r--r-- 1 ifeekes users  0 Aug  8 13:39 daemon.log
+-rw-r--r-- 1 ifeekes users 36 Aug  8 10:57 smokinMeats
+-rw-r--r-- 1 ifeekes users 83 Aug  8 13:38 zucc
+putlo   localfile
+cix(26027): command put
+cix(26027): sending header: {516,5(PUT),"localfile"}
+cix(26027): received header: {0,9(ACK),"localfile"}
+cix(26027): File has been added to server: ACK response
+put localtto
+cix(26027): command put
+cix(26027): sending header: {644,5(PUT),"localtto"}
+cix(26027): received header: {0,9(ACK),"localtto"}
+cix(26027): File has been added to server: ACK response
+ls
+cix(26027): command ls
+cix(26027): sending header {0,4(LS),""}
+cix(26027): received header {275,8(LSOUT),""}
+cix(26027): received 275 bytes
+total 4
+-rw-r--r-- 1 ifeekes users   0 Aug  8 13:39 daemon.log
+-rw-r--r-- 1 ifeekes users 516 Aug  8 13:41 localfile
+-rw-r--r-- 1 ifeekes users 644 Aug  8 13:41 localtto
+-rw-r--r-- 1 ifeekes users  36 Aug  8 10:57 smokinMeats
+-rw-r--r-- 1 ifeekes users  83 Aug  8 13:38 zucc
+get server1file           smokinMeats
+cix(26027): command get
+cix(26027): Sending header:  {0,2(GET),"smokinMeats"}
+cix(26027): Header received: {36,7(FILE),""}
+cix(26027): Packet received: 36 bytes of data
+rm zucc
+cix(26027): command rm
+cix(26027): Sending header: {0,6(RM),"zucc"}
+cix(26027): Header received: {0,9(ACK),"zucc"}
+cix(26027): Server successefully removed file: cix(26027): Received ACK response
+rm suc   zuccMe
+cix(26027): command rm
+cix(26027): Sending header: {0,6(RM),"zuccMe"}
+cix(26027): Header received: {0,10(NAK),"zuccMe"}
+cix(26027): Server failed to remove file: Received NAK response
+exit
+cix(26027): command exit
+cix(26027): caught cix_exit
+cix(26027): finishing
+bash-4.2$ ls -la
+total 131
+drwx------  2 ifeekes users   2048 Aug  8 13:41 .
+drwxr-xr-x 10 ifeekes users   2048 Aug  8 13:37 ..
+-rw-r--r--  1 ifeekes users 126976 Aug  8 13:39 .__afs800A
+-rw-r--r--  1 ifeekes users      0 Aug  8 13:39 client.log
+-rw-------  1 ifeekes users    516 Aug  7 11:05 localfile
+-rw-------  1 ifeekes users    644 Aug  7 11:05 localtto
+-rw-r--r--  1 ifeekes users     36 Aug  8 13:41 smokinMeats
+bash-4.2$ Z[Kcd ..
+bash-4.2$ pkill cix
+bash-4.2$ cd .. 
+bash-4.2$ ls
+asg1  asg2  asg3  asg4	asg5  lab0
+bash-4.2$ cd asgr4[K[K4
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+cix	  cixd.o       Listing.pdf  local2	  protocol.cpp	README	     sockets.h
+cix.cpp   cix.o        Listing.ps   logstream.h   protocol.h	remote	     sockets.o
+cixd	  deleteMe     local	    Makefile	  protocol.o	SCORE	     temp
+cixd.cpp  HEADER.html  local1	    Makefile.dep  RCS		sockets.cpp
+bash-4.2$ vim README
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"README" 6L, 127C[>c[1;1HIan Feekes
+ifeekes
+[34m#1474914[m
+asg4
+All work on this assignment done independently (no partner)
+Files to be submitted include:
+[94m~                                                                                         [8;1H~                                                                                         [9;1H~                                                                                         [10;1H~                                                                                         [11;1H~                                                                                         [12;1H~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [25;1H~                                                                                         [26;1H~                                                                                         [27;1H~                                                                                         [28;1H~                                                                                         [29;1H~                                                                                         [30;1H~                                                                                         [31;1H~                                                                                         [32;1H~                                                                                         [33;1H~                                                                                         [34;1H~                                                                                         [35;1H~                                                                                         [36;1H~                                                                                         [37;1H~                                                                                         [38;1H~                                                                                         [39;1H~                                                                                         [40;1H~                                                                                         [41;1H~                                                                                         [42;1H~                                                                                         [43;1H~                                                                                         [44;1H~                                                                                         [45;1H~                                                                                         [46;1H~                                                                                         [47;1H~                                                                                         [48;1H~                                                                                         [m[49;73H1,1[11CAll[1;1H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;14H[K[49;73H1,1[11CAll[1;1H[?12l[?25h[?25l[49;73H2[2;1H[?12l[?25h[?25l[49;73H3[3;1H[?12l[?25h[?25l[49;73H4[4;1H[?12l[?25h[?25l[49;73H5[5;1H[?12l[?25h[?25l[49;73H6[6;1H[?12l[?25h[?25liFiles to be submitted include:[49;75H2[6;2H[?12l[?25h[?25lFiles to be submitted include: [49;75H1[6;1H[?12l[?25h[?25l[49;75H2[6;2H[?12l[?25h[?25l[49;75H3[6;3H[?12l[?25h[?25l[49;75H4[6;4H[?12l[?25h[?25l[49;75H5[6;5H[?12l[?25h[?25l[49;75H6[6;6H[?12l[?25h[?25l[49;75H7[6;7H[?12l[?25h[?25l[49;75H8[6;8H[?12l[?25h[?25l[49;75H9[6;9H[?12l[?25h[?25l[49;75H10[6;10H[?12l[?25h[?25l[49;76H1[6;11H[?12l[?25h[?25l[49;76H2[6;12H[?12l[?25h[?25l[49;76H3[6;13H[?12l[?25h[?25l[49;76H4[6;14H[?12l[?25h[?25l[49;76H5[6;15H[?12l[?25h[?25l[49;76H6[6;16H[?12l[?25h[?25l[49;76H7[6;17H[?12l[?25h[?25l[49;76H8[6;18H[?12l[?25h[?25l[49;76H9[6;19H[?12l[?25h[?25l[49;75H20[6;20H[?12l[?25h[?25l[49;76H1[6;21H[?12l[?25h[?25l[49;76H2[6;22H[?12l[?25h[?25l[49;76H3[6;23H[?12l[?25h[?25l[49;76H4[6;24H[?12l[?25h[?25l[49;76H5[6;25H[?12l[?25h[?25l[49;76H6[6;26H[?12l[?25h[?25l[49;76H7[6;27H[?12l[?25h[?25l[49;76H8[6;28H[?12l[?25h[?25l[49;76H9[6;29H[?12l[?25h[?25l[49;75H30[6;30H[?12l[?25h[?25l[49;76H1[6;31H[?12l[?25h[?25l[49;76H2[6;32H[?12l[?25h[?25l[7;1H[K[49;73H7,1 [7;1H[?12l[?25h[?25l-[49;75H2[7;2H[?12l[?25h[?25lC[49;75H3[7;3H[?12l[?25h[?25l[7;2H[K[49;75H2[7;2H[?12l[?25h[?25lc[49;75H3[7;3H[?12l[?25h[?25li[49;75H4[7;4H[?12l[?25h[?25lx[49;75H5[7;5H[?12l[?25h[?25l.[49;75H6[7;6H[?12l[?25h[?25lc[49;75H7[7;7H[?12l[?25h[?25lp[49;75H8[7;8H[?12l[?25h[?25lp[49;75H9[7;9H[?12l[?25h[?25l/[49;75H10[7;10H[?12l[?25h[?25l[7;9H[K[49;75H9 [7;9H[?12l[?25h[?25l[7;8H[K[49;75H8[7;8H[?12l[?25h[?25l[7;7H[K[49;75H7[7;7H[?12l[?25h[?25l[7;6H[K[49;75H6[7;6H[?12l[?25h[?25l[7;5H[K[49;75H5[7;5H[?12l[?25h[?25l([49;73H[K[49;73H7,6[11CAll[7;6H[?12l[?25h[?25lc[49;75H7[7;7H[?12l[?25h[?25lp[49;75H8[7;8H[?12l[?25h[?25lp[49;75H9[7;9H[?12l[?25h[?25l/[49;75H10[7;10H[?12l[?25h[?25l[7;9H[K[49;75H9 [7;9H[?12l[?25h[?25l[7;8H[K[49;75H8[7;8H[?12l[?25h[?25l[7;7H[K[49;75H7[7;7H[?12l[?25h[?25l[7;6H[K[49;73H[K[49;73H7,6[11CAll[7;6H[?12l[?25h[?25l[7;5H[K[49;75H5[7;5H[?12l[?25h[?25l[8;1H[K[49;73H8,1[8;1H[?12l[?25h[?25l-[49;75H2[8;2H[?12l[?25h[?25lc[49;75H3[8;3H[?12l[?25h[?25li[49;75H4[8;4H[?12l[?25h[?25lx[49;75H5[8;5H[?12l[?25h[?25ld[49;75H6[8;6H[?12l[?25h[?25l[9;1H[K[49;73H9,1[9;1H[?12l[?25h[49;1H[K[9;1H[?25l[49;73H9,0-1[9CAll[9;1H[?12l[?25h[?25l[49;1H"README"[49;73H[K[49;10H9L, 139C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ vim README 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"README" 9L, 139C[>c[1;1HIan Feekes
+ifeekes
+[34m#1474914[m
+asg4
+All work on this assignment done independently (no partner)
+Files to be submitted include:
+-cix
+-cixd
+
+[94m~                                                                                         [11;1H~                                                                                         [12;1H~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [25;1H~                                                                                         [26;1H~                                                                                         [27;1H~                                                                                         [28;1H~                                                                                         [29;1H~                                                                                         [30;1H~                                                                                         [31;1H~                                                                                         [32;1H~                                                                                         [33;1H~                                                                                         [34;1H~                                                                                         [35;1H~                                                                                         [36;1H~                                                                                         [37;1H~                                                                                         [38;1H~                                                                                         [39;1H~                                                                                         [40;1H~                                                                                         [41;1H~                                                                                         [42;1H~                                                                                         [43;1H~                                                                                         [44;1H~                                                                                         [45;1H~                                                                                         [46;1H~                                                                                         [47;1H~                                                                                         [48;1H~                                                                                         [m[49;73H9,0-1[9CAll[9;1H[?12l[?25h[?25l[49;73H8,1  [8;1H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;14H[K[49;73H8,1[11CAll[8;1H[?12l[?25h[?25l[49;73H9[9;1H[?12l[?25h[?25l-[49;75H2[9;2H[?12l[?25h[?25ll[49;75H3[9;3H[?12l[?25h[?25lo[49;75H4[9;4H[?12l[?25h[?25lg[49;75H5[9;5H[?12l[?25h[?25ls[49;75H6[9;6H[?12l[?25h[?25lt[49;75H7[9;7H[?12l[?25h[?25lr[49;75H8[9;8H[?12l[?25h[?25le[49;75H9[9;9H[?12l[?25h[?25la[49;75H10[9;10H[?12l[?25h[?25lm[49;76H1[9;11H[?12l[?25h[?25l.[49;76H2[9;12H[?12l[?25h[?25lh[49;76H3[9;13H[?12l[?25h[?25l[49;76H4[9;14H[?12l[?25h[?25l[10;1H[K[49;73H10,1[10;1H[?12l[?25h[?25lp[49;76H2[10;2H[?12l[?25h[?25l[10;1H[K[49;76H1[10;1H[?12l[?25h[?25l-[49;76H2[10;2H[?12l[?25h[?25lp[49;76H3[10;3H[?12l[?25h[?25lr[49;76H4[10;4H[?12l[?25h[?25lo[49;76H5[10;5H[?12l[?25h[?25lt[49;76H6[10;6H[?12l[?25h[?25lo[49;76H7[10;7H[?12l[?25h[?25lc[49;76H8[10;8H[?12l[?25h[?25lo[49;76H9[10;9H[?12l[?25h[?25ll[49;76H10[10;10H[?12l[?25h[?25l.[49;77H1[10;11H[?12l[?25h[?25lh[49;77H2[10;12H[?12l[?25h[?25l[11;1H[K[49;74H1,1 [11;1H[?12l[?25h[?25l0[49;76H2[11;2H[?12l[?25h[?25l[11;1H[K[49;76H1[11;1H[?12l[?25h[?25l-[49;76H2[11;2H[?12l[?25h[?25lp[49;76H3[11;3H[?12l[?25h[?25lr[49;76H4[11;4H[?12l[?25h[?25lo[49;76H5[11;5H[?12l[?25h[?25lt[49;76H6[11;6H[?12l[?25h[?25lo[49;76H7[11;7H[?12l[?25h[?25lc[49;76H8[11;8H[?12l[?25h[?25lo[49;76H9[11;9H[?12l[?25h[?25l.[49;76H10[11;10H[?12l[?25h[?25l[11;9H[K[49;76H9 [11;9H[?12l[?25h[?25ll[49;76H10[11;10H[?12l[?25h[?25l.[49;77H1[11;11H[?12l[?25h[?25lc[49;77H2[11;12H[?12l[?25h[?25lp[49;77H3[11;13H[?12l[?25h[?25lp[49;77H4[11;14H[?12l[?25h[49;1H[K[11;13H[?25l[49;73H11,13[9CAll[11;13H[?12l[?25h[?25l[49;1H"README"[49;73H[K[49;10H11L, 178C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ vim README
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"README" 11L, 178C[>c[1;1HIan Feekes
+ifeekes
+[34m#1474914[m
+asg4
+All work on this assignment done independently (no partner)
+Files to be submitted include:
+-cix
+-cixd
+-logstream.h
+-protocol.h
+-protocol.cpp
+[94m~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [25;1H~                                                                                         [26;1H~                                                                                         [27;1H~                                                                                         [28;1H~                                                                                         [29;1H~                                                                                         [30;1H~                                                                                         [31;1H~                                                                                         [32;1H~                                                                                         [33;1H~                                                                                         [34;1H~                                                                                         [35;1H~                                                                                         [36;1H~                                                                                         [37;1H~                                                                                         [38;1H~                                                                                         [39;1H~                                                                                         [40;1H~                                                                                         [41;1H~                                                                                         [42;1H~                                                                                         [43;1H~                                                                                         [44;1H~                                                                                         [45;1H~                                                                                         [46;1H~                                                                                         [47;1H~                                                                                         [48;1H~                                                                                         [m[49;73H11,1[10CAll[11;1H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;73H11,1[10CAll[11;1H[?12l[?25h[?25l[49;76H2[11;2H[?12l[?25h[?25l[49;76H3[11;3H[?12l[?25h[?25l[49;76H4[11;4H[?12l[?25h[?25l[49;76H5[11;5H[?12l[?25h[?25l[49;76H6[11;6H[?12l[?25h[?25l[49;76H7[11;7H[?12l[?25h[?25l[49;76H8[11;8H[?12l[?25h[?25l[49;76H9[11;9H[?12l[?25h[?25l[49;76H10[11;10H[?12l[?25h[?25l[49;77H1[11;11H[?12l[?25h[?25l[49;77H2[11;12H[?12l[?25h[?25l[49;77H3[11;13H[?12l[?25h[?25l[49;77H4[11;14H[?12l[?25h[?25l[12;1H[K[49;74H2,1 [12;1H[?12l[?25h[?25l-[49;76H2[12;2H[?12l[?25h[?25ls[49;76H3[12;3H[?12l[?25h[?25lo[49;76H4[12;4H[?12l[?25h[?25lc[49;76H5[12;5H[?12l[?25h[?25lk[49;76H6[12;6H[?12l[?25h[?25le[49;76H7[12;7H[?12l[?25h[?25lt[49;76H8[12;8H[?12l[?25h[?25ls[49;76H9[12;9H[?12l[?25h[?25l.[49;76H10[12;10H[?12l[?25h[?25lc[49;77H1[12;11H[?12l[?25h[?25lp[49;77H2[12;12H[?12l[?25h[?25lp[49;77H3[12;13H[?12l[?25h[?25l[49;77H4[12;14H[?12l[?25h[?25l[13;1H[K[49;74H3,1 [13;1H[?12l[?25h[?25l-[49;76H2[13;2H[?12l[?25h[?25ls[49;76H3[13;3H[?12l[?25h[?25lo[49;76H4[13;4H[?12l[?25h[?25lc[49;76H5[13;5H[?12l[?25h[?25lk[49;76H6[13;6H[?12l[?25h[?25le[49;76H7[13;7H[?12l[?25h[?25l[13;6H[K[49;76H6[13;6H[?12l[?25h[?25l[13;5H[K[49;76H5[13;5H[?12l[?25h[?25l[13;4H[K[49;76H4[13;4H[?12l[?25h[?25l[13;3H[K[49;76H3[13;3H[?12l[?25h[?25l[13;2H[K[49;76H2[13;2H[?12l[?25h[?25l[13;1H[K[49;76H1[13;1H[?12l[?25h[?25l[94m~                                                                                         [m[49;74H2,14[12;14H[?12l[?25h[?25l[49;77H3[12;13H[?12l[?25h[?25l/[49;77H4[12;14H[?12l[?25h[?25lh[49;77H5[12;15H[?12l[?25h[?25l[49;74H1,14[11;14H[?12l[?25h[?25l[49;74H0,12[10;12H[?12l[?25h[?25l[49;73H9,14 [9;14H[?12l[?25h[?25l[49;73H8,6 [8;6H[?12l[?25h[?25l.[49;75H7[8;7H[?12l[?25h[?25lc[49;75H8[8;8H[?12l[?25h[?25lp[49;75H9[8;9H[?12l[?25h[?25lp[49;75H10[8;10H[?12l[?25h[?25l[49;73H7,5 [7;5H[?12l[?25h[?25l.[49;75H6[7;6H[?12l[?25h[?25lc[49;75H7[7;7H[?12l[?25h[?25lp[49;75H8[7;8H[?12l[?25h[?25lp[49;75H9[7;9H[?12l[?25h[?25l[49;75H10[7;10H[?12l[?25h[49;1H[K[7;9H[?25l[49;73H7,9[11CAll[7;9H[?12l[?25h[?25l[49;1H"README"[49;73H[K[49;10H12L, 202C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ vim README
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"README" 12L, 202C[>c[1;1HIan Feekes
+ifeekes
+[34m#1474914[m
+asg4
+All work on this assignment done independently (no partner)
+Files to be submitted include:
+-cix.cpp
+-cixd.cpp
+-logstream.h
+-protocol.h
+-protocol.cpp
+-sockets.cpp/h
+[94m~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [25;1H~                                                                                         [26;1H~                                                                                         [27;1H~                                                                                         [28;1H~                                                                                         [29;1H~                                                                                         [30;1H~                                                                                         [31;1H~                                                                                         [32;1H~                                                                                         [33;1H~                                                                                         [34;1H~                                                                                         [35;1H~                                                                                         [36;1H~                                                                                         [37;1H~                                                                                         [38;1H~                                                                                         [39;1H~                                                                                         [40;1H~                                                                                         [41;1H~                                                                                         [42;1H~                                                                                         [43;1H~                                                                                         [44;1H~                                                                                         [45;1H~                                                                                         [46;1H~                                                                                         [47;1H~                                                                                         [48;1H~                                                                                         [m[49;73H7,1[11CAll[7;1H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;73H7,1[11CAll[7;1H[?12l[?25h[?25l[49;73H8[8;1H[?12l[?25h[?25l[49;73H9[9;1H[?12l[?25h[?25l[49;73H10,1[10;1H[?12l[?25h[?25l[49;74H1[11;1H[?12l[?25h[?25l[49;74H2[12;1H[?12l[?25h[?25l[49;76H2[12;2H[?12l[?25h[?25l[49;76H3[12;3H[?12l[?25h[?25l[49;76H4[12;4H[?12l[?25h[?25l[49;76H5[12;5H[?12l[?25h[?25l[49;76H6[12;6H[?12l[?25h[?25l[49;76H7[12;7H[?12l[?25h[?25l[49;76H8[12;8H[?12l[?25h[?25l[49;76H9[12;9H[?12l[?25h[?25l[49;76H10[12;10H[?12l[?25h[?25l[49;77H1[12;11H[?12l[?25h[?25l[49;77H2[12;12H[?12l[?25h[?25l[49;77H3[12;13H[?12l[?25h[?25l[49;74H1[11;13H[?12l[?25h[?25l[49;74H0,12[10;12H[?12l[?25h[?25l[49;73H9,13 [9;13H[?12l[?25h[?25l[49;76H4[9;14H[?12l[?25h[?25l[10;48r[10;1H[L[1;49r[49;73H[K[49;73H10,1[10CAll[10;1H[?12l[?25h[?25l-[49;76H2[10;2H[?12l[?25h[?25lM[49;76H3[10;3H[?12l[?25h[?25la[49;76H4[10;4H[?12l[?25h[?25lk[49;76H5[10;5H[?12l[?25h[?25l[10;4H[K[49;76H4[10;4H[?12l[?25h[?25l[10;3H[K[49;76H3[10;3H[?12l[?25h[?25l[10;2H[K[49;76H2[10;2H[?12l[?25h[?25lM[49;76H3[10;3H[?12l[?25h[?25la[49;76H4[10;4H[?12l[?25h[?25lk[49;76H5[10;5H[?12l[?25h[?25le[49;76H6[10;6H[?12l[?25h[?25lf[49;76H7[10;7H[?12l[?25h[?25li[49;76H8[10;8H[?12l[?25h[?25ll[49;76H9[10;9H[?12l[?25h[?25le[49;76H10[10;10H[?12l[?25h[?25l[11;48r[11;1H[L[1;49r[49;73H[K[49;73H11,1[10CAll[11;1H[?12l[?25h[?25l-[49;76H2[11;2H[?12l[?25h[?25lM[49;76H3[11;3H[?12l[?25h[?25l[11;2H[K[49;76H2[11;2H[?12l[?25h[?25l[11;1H[K[49;76H1[11;1H[?12l[?25h[?25l[10;48r[48;1H
+[1;49r[10;1H-Makefile[48;1H[94m~                                                                                         [m[49;73H[K[49;73H10,10[9CAll[10;10H[?12l[?25h[?25l/[49;77H1[10;11H[?12l[?25h[?25l.[49;77H2[10;12H[?12l[?25h[?25ld[49;77H3[10;13H[?12l[?25h[?25le[49;77H4[10;14H[?12l[?25h[?25lp[49;77H5[10;15H[?12l[?25h[49;1H[K[10;14H[?25l[49;73H10,14[9CAll[10;14H[?12l[?25h[?25l[49;1H"README"[49;73H[K[49;10H13L, 217C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ clear
+[3;J[H[2Jbash-4.2$ make
+make: Nothing to be done for 'all'.
+bash-4.2$ ls
+cix	  cixd.o       Listing.pdf  local2	  protocol.cpp	README	     sockets.h
+cix.cpp   cix.o        Listing.ps   logstream.h   protocol.h	remote	     sockets.o
+cixd	  deleteMe     local	    Makefile	  protocol.o	SCORE	     temp
+cixd.cpp  HEADER.html  local1	    Makefile.dep  RCS		sockets.cpp
+bash-4.2$ rm cix.cp[K[K[K cixd.[K cix.0 cixd.o Listing.c[Kpdr Listing.ps 
+rm: cannot remove ‘cix.0’: No such file or directory
+rm: cannot remove ‘Listing.pdr’: No such file or directory
+bash-4.2$ ls
+cix.cpp   deleteMe     local   logstream.h   protocol.cpp  RCS	   SCORE	sockets.o
+cixd.cpp  HEADER.html  local1  Makefile      protocol.h    README  sockets.cpp	temp
+cix.o	  Listing.pdf  local2  Makefile.dep  protocol.o    remote  sockets.h
+bash-4.2$ rm cix.o
+bash-4.2$ ls
+cix.cpp   HEADER.html  local1	    Makefile	  protocol.h  README  sockets.cpp  temp
+cixd.cpp  Listing.pdf  local2	    Makefile.dep  protocol.o  remote  sockets.h
+deleteMe  local        logstream.h  protocol.cpp  RCS	      SCORE   sockets.o
+bash-4.2$ rm Listing.pdr
+rm: cannot remove ‘Listing.pdr’: No such file or directory
+bash-4.2$ rm li[K[K[KL[K Listing.pdr[Kf
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+cix.cpp   HEADER.html  local2	    Makefile.dep  protocol.o  remote	   sockets.h
+cixd.cpp  local        logstream.h  protocol.cpp  RCS	      SCORE	   sockets.o
+deleteMe  local1       Makefile     protocol.h	  README      sockets.cpp  temp
+bash-4.2$ rm protocol.o sockets.o 
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ make
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/checksource cix.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/cpplint.py.perl cix.cpp
+Done processing cix.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -c cix.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/checksource protocol.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/cpplint.py.perl protocol.cpp
+Done processing protocol.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -c protocol.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/checksource sockets.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/cpplint.py.perl sockets.cpp
+Done processing sockets.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -c sockets.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -o cix cix.o protocol.o sockets.o
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/checksource cixd.cpp
+checksource: improper character \x09 = ^I (tab)
+   file "cixd.cpp": 1 errors: line 186
+checksource: TOTAL COMPLAINTS: 1
+make: [Makefile:34: cixd.o] Error 1 (ignored)
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/cpplint.py.perl cixd.cpp
+cixd.cpp:186:  Tab found; better to use spaces  [whitespace/tab] [1]
+Done processing cixd.cpp
+Total errors found: 1
+checksource: improper character \x09 = ^I (tab)
+   file "cixd.cpp": 1 errors: line 186
+checksource: TOTAL COMPLAINTS: 1
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -c cixd.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -o cixd cixd.o protocol.o sockets.o
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+cix	  cixd.o       local	    Makefile	  protocol.o  SCORE	   temp
+cix.cpp   cix.o        local1	    Makefile.dep  RCS	      sockets.cpp
+cixd	  deleteMe     local2	    protocol.cpp  README      sockets.h
+cixd.cpp  HEADER.html  logstream.h  protocol.h	  remote      sockets.o
+bash-4.2$ checksource cixd.cpp 
+checksource: improper character \x09 = ^I (tab)
+   file "cixd.cpp": 1 errors: line 186
+checksource: TOTAL COMPLAINTS: 1
+bash-4.2$ vim cixd.cpp 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"cixd.cpp" 299L, 10095C[>c[1;4H{[2;7Hlog<<[31m"Failure to open write file. "[m;[3;7Hlog<<[31m"Setting command to NAK"[m<<endl;[4;7Hheader.command = cix_command::NAK;
+   }
+    [34m//log message and send packet[m
+   log<<[31m"sending header : "[m<<header<<endl;
+   send_packet(client_sock, &header, [38;5;130msizeof[m header);
+}
+
+[34m/*unlinkes the file passed into the arguments. If the unlinking is 
+ *successful it logs a message indicating this and invokes memset. 
+ *If unlinking is unsuccessful it logs this and set teh command to
+ *NAK. It then sends the header it has modified for cix processing*/[m
+[32mvoid[m reply_rm(accepted_socket& client_sock, cix_header& header)
+{
+   [34m//unlink deletes file[m
+   [38;5;130mif[m(unlink(header.filename)==[31m0[m)
+   [106m{[m[20;7H[34m//if the unlink is successful respond with ACK to confirm[m[21;7Hlog<<[31m"Success in removing file. Setting command to ACK"[m<<endl;[22;7Hheader.command = cix_command::ACK;[23;7Hmemset(&header.nbytes, [31m0[m, [38;5;130msizeof[m(header.nbytes));
+   [106m}[m
+   [38;5;130melse[m
+   {[27;7H[34m//if there is a failure to remove, log and set NACk command[m[28;7Hlog<<header.filename<<[31m": failure to remove file."[m<<endl;[29;7Hlog<<[31m"Setting command to NAK"[m<<endl;[30;7Hheader.command = cix_command::NAK;
+   }
+   [34m//send our header packet [m
+   log<<[31m"sending header: "[m<<header<<endl;
+   send_packet(client_sock, &header, [38;5;130msizeof[m(header));
+}
+
+[34m//This waits for client commands for processing.Three functions added[m
+[32mvoid[m run_server (accepted_socket& client_sock) {
+   log.execname (log.execname() + [31m"-server"[m);
+   log << [31m"connected to "[m << to_string (client_sock) << endl;
+   [38;5;130mtry[m {[42;7H[38;5;130mfor[m (;;) {[43;10Hcix_header header;[44;10Hrecv_packet (client_sock, &header, [38;5;130msizeof[m header);[45;10Hlog << [31m"received header "[m << header << endl;[46;10H[38;5;130mswitch[m (header.command) {[47;13H[38;5;130mcase[m cix_command::LS:[48;16Hreply_ls (client_sock, header);[49;73H158,4[9C53%[24;4H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;73H158,4[9C53%[24;4H[?12l[?25h[?25l[19;4H{[24;4H}[49;75H9[25;4H[?12l[?25h[?25l
+   [106m{[31;4H}[m[49;74H60[26;4H[?12l[?25h[?25l{[31;4H}[49;75H2[28;4H[?12l[?25h[?25l[49;75H4[30;4H[?12l[?25h[?25l[49;75H6[32;4H[?12l[?25h[?25l[49;74H70,1[36;1H[?12l[?25h[?25l[49;75H3,4[39;4H[?12l[?25h[?25l[49;75H7[43;4H[?12l[?25h[?25l[49;75H8[44;4H[?12l[?25h[?25l[49;75H9[45;4H[?12l[?25h[?25l[1;48r[48;1H
+[1;49r[48;16H[38;5;130mbreak[m;[49;73H[K[49;73H183,4[9C53%[48;4H[?12l[?25h[?25l[1;48r[1;1H[6M[1;49r[43;13H[34m/*Added functions for processing client requests*/[m[44;13H[38;5;130mcase[m cix_command::GET:[45;16Hreply_get(client_sock, header);[46;16H[38;5;130mbreak[m;[47;13H[38;5;130mcase[m cix_command::PUT:[48;16Hreply_put(client_sock, header);[49;73H[K[49;73H189,4[9C56%[48;4H[?12l[?25h[?25l[49;75H8[47;4H[?12l[?25h[?25l[49;75H7[46;4H[?12l[?25h[?25l[49;75H6,1[45;1H[?12l[?25h[?25l[49;77H2-9[45;9H[?12l[?25h[?25l[49;77H3-10[45;10H[?12l[?25h[?25l[49;77H2-9 [45;9H[?12l[?25h[?25l[49;77H1  [45;1H[?12l[?25h[?25l[49;77H2-9[45;9H[?12l[?25h[?25lreply_get(client_sock, header); [45;40H[K[49;77H1  [45;1H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H2[45;2H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H3[45;3H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H4[45;4H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H5[45;5H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H6[45;6H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H7[45;7H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H8[45;8H[?12l[?25h[?25l[7C reply_get(client_sock, header);[49;77H9[45;9H[?12l[?25h[49;1H[K[45;8H[?25l[49;73H186,8[9C56%[45;8H[?12l[?25h[?25l[49;1H"cixd.cpp"[49;73H[K[49;12H299L, 10102C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+cix	  cixd.o       local	    Makefile	  protocol.o  SCORE	   temp
+cix.cpp   cix.o        local1	    Makefile.dep  RCS	      sockets.cpp
+cixd	  deleteMe     local2	    protocol.cpp  README      sockets.h
+cixd.cpp  HEADER.html  logstream.h  protocol.h	  remote      sockets.o
+bash-4.2$ checksource chi[K[Kixd.cpp 
+bash-4.2$ checksource cix.cpp 
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ make
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/checksource cixd.cpp
+/afs/cats.ucsc.edu/courses/cmps109-wm/bin/cpplint.py.perl cixd.cpp
+Done processing cixd.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -c cixd.cpp
+g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast -fdiagnostics-color=never -o cixd cixd.o protocol.o sockets.o
+bash-4.2$ ls
+cix	  cixd.o       local	    Makefile	  protocol.o  SCORE	   temp
+cix.cpp   cix.o        local1	    Makefile.dep  RCS	      sockets.cpp
+cixd	  deleteMe     local2	    protocol.cpp  README      sockets.h
+cixd.cpp  HEADER.html  logstream.h  protocol.h	  remote      sockets.o
+bash-4.2$ vim REAMD[K[KDME
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"README" 13L, 217C[>c[1;1HIan Feekes
+ifeekes
+[34m#1474914[m
+asg4
+All work on this assignment done independently (no partner)
+Files to be submitted include:
+-cix.cpp
+-cixd.cpp
+-logstream.h
+-Makefile/.dep
+-protocol.h
+-protocol.cpp
+-sockets.cpp/h
+[94m~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [25;1H~                                                                                         [26;1H~                                                                                         [27;1H~                                                                                         [28;1H~                                                                                         [29;1H~                                                                                         [30;1H~                                                                                         [31;1H~                                                                                         [32;1H~                                                                                         [33;1H~                                                                                         [34;1H~                                                                                         [35;1H~                                                                                         [36;1H~                                                                                         [37;1H~                                                                                         [38;1H~                                                                                         [39;1H~                                                                                         [40;1H~                                                                                         [41;1H~                                                                                         [42;1H~                                                                                         [43;1H~                                                                                         [44;1H~                                                                                         [45;1H~                                                                                         [46;1H~                                                                                         [47;1H~                                                                                         [48;1H~                                                                                         [m[49;73H10,1[10CAll[10;1H[?12l[?25h[?25l[49;1H[1m-- INSERT --[m[49;13H[K[49;73H10,1[10CAll[10;1H[?12l[?25h[?25l[49;73H9,1 [9;1H[?12l[?25h[?25l[49;73H8[8;1H[?12l[?25h[?25l[49;73H7[7;1H[?12l[?25h[?25l[49;73H6[6;1H[?12l[?25h[?25l[49;73H5[5;1H[?12l[?25h[?25l[6;48r[6;1H[L[1;49r[5;1H[K[6;1HAll work on this assignment done independently (no partner)[49;73H[K[49;73H6,1[11CAll[6;1H[?12l[?25h[?25l[49;73H5[5;1H[?12l[?25h[?25lN[49;75H2[5;2H[?12l[?25h[?25lO[49;75H3[5;3H[?12l[?25h[?25lT[49;75H4[5;4H[?12l[?25h[?25lE[49;75H5[5;5H[?12l[?25h[?25l[49;75H6[5;6H[?12l[?25h[?25l[49;75H5[5;5H[?12l[?25h[?25l[5;4H[K[49;75H4[5;4H[?12l[?25h[?25l[5;3H[K[49;75H3[5;3H[?12l[?25h[?25l[5;2H[K[49;75H2[5;2H[?12l[?25h[?25lo[49;75H3[5;3H[?12l[?25h[?25lt[49;75H4[5;4H[?12l[?25h[?25le[49;75H5[5;5H[?12l[?25h[?25l[49;75H6[5;6H[?12l[?25h[?25lt[49;75H7[5;7H[?12l[?25h[?25lo[49;75H8[5;8H[?12l[?25h[?25l[49;75H9[5;9H[?12l[?25h[?25lG[49;75H10[5;10H[?12l[?25h[?25lr[49;76H1[5;11H[?12l[?25h[?25la[49;76H2[5;12H[?12l[?25h[?25ld[49;76H3[5;13H[?12l[?25h[?25le[49;76H4[5;14H[?12l[?25h[?25lr[49;76H5[5;15H[?12l[?25h[?25ls[49;76H6[5;16H[?12l[?25h[?25l:[49;76H7[5;17H[?12l[?25h[?25l[49;76H8[5;18H[?12l[?25h[?25lO[49;76H9[5;19H[?12l[?25h[?25lf[49;75H20[5;20H[?12l[?25h[?25lt[49;76H1[5;21H[?12l[?25h[?25le[49;76H2[5;22H[?12l[?25h[?25ln[49;76H3[5;23H[?12l[?25h[?25l[49;76H4[5;24H[?12l[?25h[?25lt[49;76H5[5;25H[?12l[?25h[?25lh[49;76H6[5;26H[?12l[?25h[?25le[49;76H7[5;27H[?12l[?25h[?25l[49;76H8[5;28H[?12l[?25h[?25ls[49;76H9[5;29H[?12l[?25h[?25lc[49;75H30[5;30H[?12l[?25h[?25lr[49;76H1[5;31H[?12l[?25h[?25li[49;76H2[5;32H[?12l[?25h[?25lp[49;76H3[5;33H[?12l[?25h[?25lt[49;76H4[5;34H[?12l[?25h[?25l[49;76H5[5;35H[?12l[?25h[?25lf[49;76H6[5;36H[?12l[?25h[?25li[49;76H7[5;37H[?12l[?25h[?25ll[49;76H8[5;38H[?12l[?25h[?25le[49;76H9[5;39H[?12l[?25h[?25ls[49;75H40[5;40H[?12l[?25h[?25l[49;76H1[5;41H[?12l[?25h[?25lo[49;76H2[5;42H[?12l[?25h[?25lp[49;76H3[5;43H[?12l[?25h[?25le[49;76H4[5;44H[?12l[?25h[?25ln[49;76H5[5;45H[?12l[?25h[?25l[49;76H6[5;46H[?12l[?25h[?25lt[49;76H7[5;47H[?12l[?25h[?25lo[49;76H8[5;48H[?12l[?25h[?25l[49;76H9[5;49H[?12l[?25h[?25lb[49;75H50[5;50H[?12l[?25h[?25ll[49;76H1[5;51H[?12l[?25h[?25la[49;76H2[5;52H[?12l[?25h[?25ln[49;76H3[5;53H[?12l[?25h[?25lk[49;76H4[5;54H[?12l[?25h[?25l[49;76H5[5;55H[?12l[?25h[?25lf[49;76H6[5;56H[?12l[?25h[?25li[49;76H7[5;57H[?12l[?25h[?25ll[49;76H8[5;58H[?12l[?25h[?25le[49;76H9[5;59H[?12l[?25h[?25ls[49;75H60[5;60H[?12l[?25h[?25l[49;76H1[5;61H[?12l[?25h[?25lt[49;76H2[5;62H[?12l[?25h[?25lh[49;76H3[5;63H[?12l[?25h[?25le[49;76H4[5;64H[?12l[?25h[?25l[49;76H5[5;65H[?12l[?25h[?25lf[49;76H6[5;66H[?12l[?25h[?25li[49;76H7[5;67H[?12l[?25h[?25lr[49;76H8[5;68H[?12l[?25h[?25ls[49;76H9[5;69H[?12l[?25h[?25lt[49;75H70[5;70H[?12l[?25h[?25l[6;48r[6;1H[L[1;49r[49;73H[K[49;73H6,1[11CAll[6;1H[?12l[?25h[?25ls[49;75H2[6;2H[?12l[?25h[?25le[49;75H3[6;3H[?12l[?25h[?25lv[49;75H4[6;4H[?12l[?25h[?25le[49;75H5[6;5H[?12l[?25h[?25lr[49;75H6[6;6H[?12l[?25h[?25la[49;75H7[6;7H[?12l[?25h[?25ll[49;75H8[6;8H[?12l[?25h[?25l[49;75H9[6;9H[?12l[?25h[?25lt[49;75H10[6;10H[?12l[?25h[?25li[49;76H1[6;11H[?12l[?25h[?25lm[49;76H2[6;12H[?12l[?25h[?25le[49;76H3[6;13H[?12l[?25h[?25ls[49;76H4[6;14H[?12l[?25h[?25l[49;76H5[6;15H[?12l[?25h[?25ly[49;76H6[6;16H[?12l[?25h[?25lo[49;76H7[6;17H[?12l[?25h[?25lu[49;76H8[6;18H[?12l[?25h[?25l[49;76H9[6;19H[?12l[?25h[?25lt[49;75H20[6;20H[?12l[?25h[?25lr[49;76H1[6;21H[?12l[?25h[?25li[49;76H2[6;22H[?12l[?25h[?25l[6;21H[K[49;76H1[6;21H[?12l[?25h[?25ly[49;76H2[6;22H[?12l[?25h[?25l[49;76H3[6;23H[?12l[?25h[?25lt[49;76H4[6;24H[?12l[?25h[?25lo[49;76H5[6;25H[?12l[?25h[?25l[49;76H6[6;26H[?12l[?25h[?25lv[49;76H7[6;27H[?12l[?25h[?25li[49;76H8[6;28H[?12l[?25h[?25lm[49;76H9[6;29H[?12l[?25h[?25l[49;75H30[6;30H[?12l[?25h[?25li[49;76H1[6;31H[?12l[?25h[?25ln[49;76H2[6;32H[?12l[?25h[?25lt[49;76H3[6;33H[?12l[?25h[?25lo[49;76H4[6;34H[?12l[?25h[?25l[49;76H5[6;35H[?12l[?25h[?25lt[49;76H6[6;36H[?12l[?25h[?25lh[49;76H7[6;37H[?12l[?25h[?25le[49;76H8[6;38H[?12l[?25h[?25lm[49;76H9[6;39H[?12l[?25h[?25l.[49;75H40[6;40H[?12l[?25h[?25l[49;76H1[6;41H[?12l[?25h[?25lM[49;76H2[6;42H[?12l[?25h[?25la[49;76H3[6;43H[?12l[?25h[?25ly[49;76H4[6;44H[?12l[?25h[?25l[49;76H5[6;45H[?12l[?25h[?25lt[49;76H6[6;46H[?12l[?25h[?25la[49;76H7[6;47H[?12l[?25h[?25lk[49;76H8[6;48H[?12l[?25h[?25le[49;76H9[6;49H[?12l[?25h[?25l[49;75H50[6;50H[?12l[?25h[?25la[49;76H1[6;51H[?12l[?25h[?25l[49;76H2[6;52H[?12l[?25h[?25lf[49;76H3[6;53H[?12l[?25h[?25le[49;76H4[6;54H[?12l[?25h[?25lw[49;76H5[6;55H[?12l[?25h[?25l[49;76H6[6;56H[?12l[?25h[?25la[49;76H7[6;57H[?12l[?25h[?25lt[49;76H8[6;58H[?12l[?25h[?25lt[49;76H9[6;59H[?12l[?25h[?25le[49;75H60[6;60H[?12l[?25h[?25lm[49;76H1[6;61H[?12l[?25h[?25lp[49;76H2[6;62H[?12l[?25h[?25lt[49;76H3[6;63H[?12l[?25h[?25ls[49;76H4[6;64H[?12l[?25h[?25l[49;76H5[6;65H[?12l[?25h[?25lt[49;76H6[6;66H[?12l[?25h[?25lo[49;76H7[6;67H[?12l[?25h[?25l[49;76H8[6;68H[?12l[?25h[?25lo[49;76H9[6;69H[?12l[?25h[?25lp[49;75H70[6;70H[?12l[?25h[?25le[49;76H1[6;71H[?12l[?25h[?25ln[49;76H2[6;72H[?12l[?25h[?25l.[49;76H3[6;73H[?12l[?25h[?25l[49;76H4[6;74H[?12l[?25h[?25l[7;48r[7;1H[L[1;49r[49;73H[K[49;73H7,1[11CAll[7;1H[?12l[?25h[?25lA[49;75H2[7;2H[?12l[?25h[?25lp[49;75H3[7;3H[?12l[?25h[?25lo[49;75H4[7;4H[?12l[?25h[?25ll[49;75H5[7;5H[?12l[?25h[?25lo[49;75H6[7;6H[?12l[?25h[?25lg[49;75H7[7;7H[?12l[?25h[?25li[49;75H8[7;8H[?12l[?25h[?25le[49;75H9[7;9H[?12l[?25h[?25ls[49;75H10[7;10H[?12l[?25h[?25l,[49;76H1[7;11H[?12l[?25h[?25l[49;76H2[7;12H[?12l[?25h[?25lI[49;76H3[7;13H[?12l[?25h[?25l[49;76H4[7;14H[?12l[?25h[?25lc[49;76H5[7;15H[?12l[?25h[?25lo[49;76H6[7;16H[?12l[?25h[?25lu[49;76H7[7;17H[?12l[?25h[?25l;[49;76H8[7;18H[?12l[?25h[?25ld[49;76H9[7;19H[?12l[?25h[?25l[7;18H[K[49;76H8[7;18H[?12l[?25h[?25l[7;17H[K[49;76H7[7;17H[?12l[?25h[?25l[7;16H[K[49;76H6[7;16H[?12l[?25h[?25lu[49;76H7[7;17H[?12l[?25h[?25ll[49;76H8[7;18H[?12l[?25h[?25ld[49;76H9[7;19H[?12l[?25h[?25ln[49;75H20[7;20H[?12l[?25h[?25l'[49;76H1[7;21H[?12l[?25h[?25lt[49;76H2[7;22H[?12l[?25h[?25l[49;76H3[7;23H[?12l[?25h[?25lf[49;76H4[7;24H[?12l[?25h[?25li[49;76H5[7;25H[?12l[?25h[?25lx[49;76H6[7;26H[?12l[?25h[?25l[49;76H7[7;27H[?12l[?25h[?25lt[49;76H8[7;28H[?12l[?25h[?25lh[49;76H9[7;29H[?12l[?25h[?25le[49;75H30[7;30H[?12l[?25h[?25ls[49;76H1[7;31H[?12l[?25h[?25le[49;76H2[7;32H[?12l[?25h[?25l[49;76H3[7;33H[?12l[?25h[?25le[49;76H4[7;34H[?12l[?25h[?25lr[49;76H5[7;35H[?12l[?25h[?25lr[49;76H6[7;36H[?12l[?25h[?25lo[49;76H7[7;37H[?12l[?25h[?25lr[49;76H8[7;38H[?12l[?25h[?25ls[49;76H9[7;39H[?12l[?25h[?25l.[49;75H40[7;40H[?12l[?25h[?25l[49;76H1[7;41H[?12l[?25h[?25l[49;76H0[7;40H[?12l[?25h[?25l[7;39H[K[49;75H39[7;39H[?12l[?25h[?25l[7;38H[K[49;76H8[7;38H[?12l[?25h[?25l[7;37H[K[49;76H7[7;37H[?12l[?25h[?25l[7;36H[K[49;76H6[7;36H[?12l[?25h[?25l[7;35H[K[49;76H5[7;35H[?12l[?25h[?25l[7;34H[K[49;76H4[7;34H[?12l[?25h[?25l[7;33H[K[49;76H3[7;33H[?12l[?25h[?25l[49;76H2[7;32H[?12l[?25h[?25l[7;31H[K[49;76H1[7;31H[?12l[?25h[?25l[7;30H[K[49;76H0[7;30H[?12l[?25h[?25l[7;29H[K[49;75H29[7;29H[?12l[?25h[?25li[49;75H30[7;30H[?12l[?25h[?25ls[49;76H1[7;31H[?12l[?25h[?25l[49;76H2[7;32H[?12l[?25h[?25li[49;76H3[7;33H[?12l[?25h[?25ls[49;76H4[7;34H[?12l[?25h[?25ls[49;76H5[7;35H[?12l[?25h[?25lu[49;76H6[7;36H[?12l[?25h[?25le[49;76H7[7;37H[?12l[?25h[?25l.[49;76H8[7;38H[?12l[?25h[?25l[49;76H9[7;39H[?12l[?25h[49;1H[K[7;38H[?25l[49;73H7,38[10CAll[7;38H[?12l[?25h[?25l[49;1H"README"[49;73H[K[49;10H16L, 400C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ clear
+[3;J[H[2Jbash-4.2$ submit cmps109-wm.u18 asg1 file.cpp another_file.cpp etc[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+
+submit: ERROR: missing or incorrect Class.Qtr (cmps10)
+Choose one from:
+bme060-ccp.w08	   cmps012a-pt.w17   cmps101-pt.f16   cmps112-wm.w08
+bme060-js.w07	   cmps012a-pt.w18   cmps101-pt.f17   cmps112-wm.w09
+bme60-bk.w10	   cmps012a-wm.s09   cmps101-pt.s08   cmps112-wm.w12
+ce13-ghe.w15	   cmps012a-wm.u07   cmps101-pt.s09   cmps112-wm.w18
+cmpe012-adb.s08    cmps012b-pt.s15   cmps101-pt.s18   cmps128-elm.s08
+cmpe012-fire.u08   cmps012b-pt.s16   cmps101-pt.u07   cmps12b-nojw.f14
+cmpe012-fjf.f11    cmps012b-pt.u12   cmps101-pt.u08   cmps130-avg.f14
+cmpe012l-fire.u09  cmps012b-pt.u13   cmps101-pt.u09   cmps132-avg.s14
+cmpe012l-fjf.w11   cmps012b-pt.u14   cmps101-pt.u10   cmps132-avg.w17
+cmpe012l-tl.s07    cmps012b-pt.u15   cmps101-pt.u11   cmps140-bl.w08
+cmpe012-tl2.s12    cmps012b-pt.u16   cmps101-pt.u12   cmps140-bl.w13
+cmpe012-tl.s12	   cmps012b-pt.u17   cmps101-pt.u13   cmps140-ral.w07
+cmpe012-tl.w10	   cmps012b-pt.u18   cmps101-pt.u14   cmps140-ral.w12
+cmpe012-tl.w12	   cmps012b-pt.w09   cmps101-pt.u15   cmps160-ap.f09
+cmpe013-bm.s14	   cmps012b-pt.w18   cmps101-pt.u16   cmps160-ap.f12
+cmpe013-cab.s09    cmps012b-ral.s12  cmps101-pt.u17   cmps160-ap.f16
+cmpe013-cb.s10	   cmps012b-wm.f07   cmps101-pt.u18   cmps160-ap.f17
+cmpe013-ge.w14	   cmps012b-wm.f08   cmps101-pt.w09   cmps160-ap.s13
+cmpe110-adb.w09    cmps012b-wm.f09   cmps101-pt.w14   cmps160-ap.s15
+cmpe110-fjf.s11    cmps012b-wm.f10   cmps101-pt.w15   cmps160-ap.s16
+cmpe12-adb.f07	   cmps012b-wm.f11   cmps101-pt.w17   cmps160-db.f08
+cmpe12-adb.f08	   cmps012b-wm.f12   cmps101-rj.f15   cmps160-jed.f07
+cmpe12-adb.s08	   cmps012b-wm.f13   cmps104a-wm.f07  cmps160-jed.f10
+cmpe12-adb.w07	   cmps012b-wm.s07   cmps104a-wm.f08  cmps160-skl.s07
+cmpe12-fire.u10    cmps012b-wm.s08   cmps104a-wm.f09  cmps161-ap.w07
+cmpe12-fjf.w08	   cmps012b-wm.s09   cmps104a-wm.f10  cmps161-ap.w08
+cmpe12-fjf.w09	   cmps012b-wm.s10   cmps104a-wm.f12  cmps161-ap.w09
+cmpe12l-cab.f09    cmps012b-wm.s13   cmps104a-wm.f13  cmps161-ap.w10
+cmpe12l-cab.f10    cmps012b-wm.s14   cmps104a-wm.f14  cmps161-ap.w11
+cmpe12-tl.s14	   cmps012b-wm.u07   cmps104a-wm.f15  cmps161-ap.w12
+cmpe13-ge.s13	   cmps012b-wm.w07   cmps104a-wm.f16  cmps161-ap.w14
+cmpe13-ghe.s11	   cmps012b-wm.w08   cmps104a-wm.f17  cmps161-ap.w17
+cmpe13-jc.w13	   cmps012b-wm.w10   cmps104a-wm.s15  cmps162-ap.s12
+cmpe13-md.s15	   cmps012b-wm.w12   cmps104a-wm.s16  cmps164-ap.s07
+cmpe150-brs.w07    cmps012b-wm.w13   cmps104a-wm.s17  cmps180-np.w07
+cmpe150-hd.w15	   cmps012b-wm.w14   cmps104a-wm.s18  cmps180-np.w08
+cmpe156-mp.w15	   cmps012b-wm.w15   cmps104b-wm.s07  cmps180-pk.f12
+cmpe156-mp.w16	   cmps012b-wm.w16   cmps104b-wm.s08  cmps180-pk.f13
+cmpe156-mp.w17	   cmps012l-db.w07   cmps105-wm.w07   cmps180-pk.w12
+cmpe156-mp.w18	   cmps012l-pt.s07   cmps109-db.s07   cmps180-sf.f16
+cmpe177-pt.u09	   cmps012l-pt.w08   cmps109-wm.s12   cmps180-wt.f09
+cmpe220-adb.w07    cmps012l-wm.u07   cmps109-wm.s14   cmps180-wt.w09
+cmpe220-adb.w09    cmps012m-pt.w09   cmps109-wm.s15   cmps180-wt.w15
+cmps005j-wm.u11    cmps012m-wm.s07   cmps109-wm.s16   cmps180-wt.w16
+cmps005p-pt.s17    cmps012m-wm.u07   cmps109-wm.u13   cmps181-jpl.w14
+cmps010-pt.f07	   cmps012m-wm.w07   cmps109-wm.u14   cmps181-np.s07
+cmps010-pt.f08	   cmps012-ral.s12   cmps109-wm.u15   cmps181-np.s08
+cmps010-pt.f09	   cmps060n-db.s08   cmps109-wm.u16   cmps182-dm.s15
+cmps010-pt.f10	   cmps080g-avg.s08  cmps109-wm.u17   cmps182-dm.u16
+cmps010-pt.w07	   cmps080v-ap.f08   cmps109-wm.u18   cmps182-dm.u17
+cmps010-pt.w08	   cmps101-avg.f13   cmps109-wm.w09   cmps182-np.f08
+cmps010-skl.w11    cmps101-avg.f15   cmps109-wm.w13   cmps182-np.f11
+cmps011-pt.s15	   cmps101-avg.f16   cmps109-wm.w15   cmps182-sf.w15
+cmps011-pt.s17	   cmps101-avg.s12   cmps109-wm.w16   cmps182-sf.w16
+cmps011-pt.w14	   cmps101-avg.s15   cmps109-wm.w18   cmps182-wt.s13
+cmps011-pt.w15	   cmps101-avg.s17   cmps10-skl.w10   cmps182-wt.s14
+cmps011-pt.w16	   cmps101-avg.w07   cmps111-dl.f08   cmps182-wt.w10
+cmps012a-ap.w11    cmps101-avg.w10   cmps111-dl.s07   cmps200-ap.f16
+cmps012a-ap.w14    cmps101-avg.w18   cmps111-dl.s08   cmps200-ap.f17
+cmps012a-ap.w15    cmps101-db.f08    cmps111-dl.w14   cmps261-ap.f13
+cmps012a-cf.f12    cmps101-mw.s11    cmps111-elm.f07  cmps261-ap.f15
+cmps012a-pt.f15    cmps101-mw.w13    cmps111-wm.s10   cmps261-ap.s10
+cmps012a-pt.s07    cmps101-pt.f07    cmps112-wm.f14   cmps261-ap.s18
+cmps012a-pt.s10    cmps101-pt.f09    cmps112-wm.f15   cmps261-sp.s18
+cmps012a-pt.s14    cmps101-pt.f10    cmps112-wm.f16   cmps60n-wctan.s07
+cmps012a-pt.s18    cmps101-pt.f11    cmps112-wm.f17   index.html
+cmps012a-pt.w08    cmps101-pt.f12    cmps112-wm.s11   phys221b-jn.w07
+cmps012a-pt.w13    cmps101-pt.f14    cmps112-wm.s17   test-tf.w12
+cmps012a-pt.w16    cmps101-pt.f15    cmps112-wm.s18
+
+Usage: submit Class.Qtr Assignment Filename...
+Usage: submit -m
+'submit -m' will display the documentation
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+cix	  cixd.o       local	    Makefile	  protocol.o  SCORE	   temp
+cix.cpp   cix.o        local1	    Makefile.dep  RCS	      sockets.cpp
+cixd	  deleteMe     local2	    protocol.cpp  README      sockets.h
+cixd.cpp  HEADER.html  logstream.h  protocol.h	  remote      sockets.o
+bash-4.2$ submit cmps109-wm.u18 asg1 file.cpp another_file.cpp etc[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K4 cix.cpp cixd.cpp ci[K[Klogstream.h Makefile Makefile.dep pr otocol.cpp protoco.[Kl.h sockets.cpp sockets.h sockets.o 
+Submitting the files you specified...
+copying cix\.cpp
+copying cixd\.cpp
+copying logstream\.h
+copying Makefile
+copying Makefile\.dep
+copying protocol\.cpp
+copying protocol\.h
+copying sockets\.cpp
+copying sockets\.h
+copying sockets\.o
+
+10 Files submitted: 
+  Makefile (revision 1)
+  Makefile.dep (revision 1)
+  cix.cpp (revision 1)
+  cixd.cpp (revision 1)
+  logstream.h (revision 1)
+ 

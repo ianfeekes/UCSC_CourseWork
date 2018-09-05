@@ -1,0 +1,2075 @@
+%PDF-1.4
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-275.02 -2.7 Td
+(hello-world.cpp)Tj
+-119.97 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(// $Id: hello-world.cpp,v 1.17 2018-02-07 17:33:53-08 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(#include <cmath>)]TJ
+T*[(4:)-600(#include <iostream>)]TJ
+T*[(5:)-600(#include <memory>)]TJ
+T*[(6:)-600(#include <string>)]TJ
+T*[(7:)-600(#include <vector>)]TJ
+T*[(8:)-600(using namespace std;)]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(#include <GL/freeglut.h>)]TJ
+T*[(11:)-600(#include <libgen.h>)]TJ
+(12:)'
+T*[(13:)-600(// Characteristics of the window.)]TJ
+T*[(14:)-600(struct window {)]TJ
+T*[(15:)-600(   string name;)]TJ
+T*[(16:)-600(   int width {384};)]TJ
+T*[(17:)-600(   int height {256};)]TJ
+T*[(18:)-600(} window;)]TJ
+(19:)'
+T*[(20:)-600(template <typename item_t>)]TJ
+T*[(21:)-600(struct cycle_iterator {)]TJ
+T*[(22:)-600(   const vector<item_t> items;)]TJ
+T*[(23:)-600(   size_t curr_item {0};)]TJ
+T*[(24:)-600(   cycle_iterator \(initializer_list<item_t> list\):)]TJ
+T*[(25:)-600(               items\(vector<item_t> \(list\)\) {})]TJ
+T*[(26:)-600(   const item_t& operator*\(\) { return items[curr_item]; })]TJ
+T*[(27:)-600(   const item_t& operator[] \(size_t index\) {)]TJ
+T*[(28:)-600(      return items[\(curr_item + index\) % items.size\(\)];)]TJ
+T*[(29:)-600(   })]TJ
+T*[(30:)-600(   cycle_iterator& operator++\(\) { )]TJ
+T*[(31:)-600(      curr_item = \(curr_item + 1\) % items.size\(\);)]TJ
+T*[(32:)-600(      return *this;)]TJ
+T*[(33:)-600(   })]TJ
+T*[(34:)-600(};)]TJ
+(35:)'
+T*[(36:)-600(cycle_iterator<string> greetings {)]TJ
+T*[(37:)-600(   "Hello, World!",)]TJ
+T*[(38:)-600(   "Hodie natus est radici frater.",)]TJ
+T*[(39:)-600(   "Goodbye, World!",)]TJ
+T*[(40:)-600(};)]TJ
+(41:)'
+T*[(42:)-600(GLubyte RED[] = {0xFF, 0x00, 0x00};)]TJ
+T*[(43:)-600(GLubyte GREEN[] = {0x00, 0xFF, 0x00};)]TJ
+T*[(44:)-600(GLubyte BLUE[] = {0x00, 0x00, 0xFF};)]TJ
+T*[(45:)-600(cycle_iterator<GLubyte*> colors {RED, GREEN, BLUE};)]TJ
+(46:)'
+T*[(47:)-600(cycle_iterator<void*> glut_fonts {)]TJ
+T*[(48:)-600(   GLUT_BITMAP_TIMES_ROMAN_24,)]TJ
+T*[(49:)-600(   GLUT_BITMAP_HELVETICA_18,)]TJ
+T*[(50:)-600(   GLUT_BITMAP_9_BY_15,)]TJ
+T*[(51:)-600(};)]TJ
+(52:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2609
+endobj
+19 0 obj
+<</Length 20 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-275.02 -2.7 Td
+(hello-world.cpp)Tj
+-119.97 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+(53:)Tj
+12 TL
+T*[(54:)-600(void draw_rectangle \(const GLubyte* color\) {)]TJ
+T*[(55:)-600(   glBegin \(GL_POLYGON\);)]TJ
+T*[(56:)-600(   glColor3ubv \(color\);)]TJ
+T*[(57:)-600(   glVertex2f \(0, 0\);)]TJ
+T*[(58:)-600(   glVertex2f \(window.width, 0\);)]TJ
+T*[(59:)-600(   glVertex2f \(window.width, window.height\);)]TJ
+T*[(60:)-600(   glVertex2f \(0, window.height\);)]TJ
+T*[(61:)-600(   glEnd\(\);)]TJ
+T*[(62:)-600(})]TJ
+(63:)'
+T*[(64:)-600(void draw_ellipse \(const GLubyte* color\) {)]TJ
+T*[(65:)-600(   glBegin \(GL_POLYGON\);)]TJ
+T*[(66:)-600(   glColor3ubv \(color\);)]TJ
+T*[(67:)-600(   const GLfloat delta = 2 * M_PI / 64;)]TJ
+T*[(68:)-600(   const GLfloat width = window.width / 2.5;)]TJ
+T*[(69:)-600(   const GLfloat height = window.height / 2.5;)]TJ
+T*[(70:)-600(   const GLfloat xoffset = window.width / 2.0;)]TJ
+T*[(71:)-600(   const GLfloat yoffset = window.height / 2.0;)]TJ
+T*[(72:)-600(   for \(GLfloat theta = 0; theta < 2 * M_PI; theta += delta\) {)]TJ
+T*[(73:)-600(      GLfloat xpos = width * cos \(theta\) + xoffset;)]TJ
+T*[(74:)-600(      GLfloat ypos = height * sin \(theta\) + yoffset;)]TJ
+T*[(75:)-600(      glVertex2f \(xpos, ypos\);)]TJ
+T*[(76:)-600(   })]TJ
+T*[(77:)-600(   glEnd\(\);)]TJ
+T*[(78:)-600(})]TJ
+(79:)'
+T*[(80:)-600(void draw_greeting \(const string& greeting, const GLubyte* color\) {)]TJ
+T*[(81:)-600(   const GLubyte* glgreeting =)]TJ
+T*[(82:)-600(         reinterpret_cast<const GLubyte*> \(greeting.c_str\(\)\);)]TJ
+(83:)'
+T*[(84:)-600(   void* font = *glut_fonts;)]TJ
+T*[(85:)-600(   int greeting_width = glutBitmapLength \(font, glgreeting\);)]TJ
+T*[(86:)-600(   int greeting_height = glutBitmapHeight \(font\);)]TJ
+(87:)'
+T*[(88:)-600(   glColor3ubv \(color\);)]TJ
+(89:)'
+T*[(90:)-600(   float xpos = window.width / 2.0 - greeting_width / 2.0;)]TJ
+T*[(91:)-600(   float ypos = window.height / 2.0 - greeting_height / 4.0;)]TJ
+T*[(92:)-600(   glRasterPos2f \(xpos, ypos\);)]TJ
+(93:)'
+T*[(94:)-600(   glutBitmapString \(font, glgreeting\);)]TJ
+T*[(95:)-600(})]TJ
+(96:)'
+T*[(97:)-600(void display\(\) {)]TJ
+T*[(98:)-600(   glClearColor \(0.15, 0.15, 0.15, 1.0\);)]TJ
+T*[(99:)-600(   glClear \(GL_COLOR_BUFFER_BIT\);)]TJ
+-6.6 -12 Td
+(100:)Tj
+T*[(101:)-600(   draw_rectangle \(colors[0]\);)]TJ
+T*[(102:)-600(   draw_ellipse \(colors[1]\);)]TJ
+T*[(103:)-600(   draw_greeting \(*greetings, colors[2]\);)]TJ
+(104:)'
+T*[(105:)-600(   glutSwapBuffers\(\);)]TJ
+T*[(106:)-600(})]TJ
+(107:)'
+ET
+Q
+Q
+endstream
+endobj
+20 0 obj
+2992
+endobj
+24 0 obj
+<</Length 25 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(3)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-275.02 -2.7 Td
+(hello-world.cpp)Tj
+-119.97 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 57.2 718 Tm
+(108:)Tj
+12 TL
+T*[(109:)-600(void invert_colors\(\) {)]TJ
+T*[(110:)-600(   for \(size_t color = 0; color < 3; ++color\) {)]TJ
+T*[(111:)-600(      for \(size_t rgb = 0; rgb < 3; ++rgb\) {)]TJ
+T*[(112:)-600(         colors[color][rgb] ^= 0xFF;)]TJ
+T*[(113:)-600(      })]TJ
+T*[(114:)-600(   })]TJ
+T*[(115:)-600(})]TJ
+(116:)'
+T*[(117:)-600(void keyboard \(GLubyte key, int, int\) {)]TJ
+T*[(118:)-600(   enum {BS = 8, LF = 10, CR = 13, ESC = 27, DEL = 127};)]TJ
+T*[(119:)-600(   switch \(key\) {)]TJ
+T*[(120:)-600(      case ' ': case BS: case CR: case LF: case DEL:)]TJ
+T*[(121:)-600(         invert_colors\(\);)]TJ
+T*[(122:)-600(         break;)]TJ
+T*[(123:)-600(      case 'c': case 'C':)]TJ
+T*[(124:)-600(         ++colors;)]TJ
+T*[(125:)-600(         break;)]TJ
+T*[(126:)-600(      case 'f': case 'F':)]TJ
+T*[(127:)-600(         ++glut_fonts;)]TJ
+T*[(128:)-600(         break;)]TJ
+T*[(129:)-600(      case 'g': case 'G':)]TJ
+T*[(130:)-600(         ++greetings;)]TJ
+T*[(131:)-600(         break;)]TJ
+T*[(132:)-600(      case 'q': case 'Q': case ESC:)]TJ
+T*[(133:)-600(         exit \(EXIT_SUCCESS\);)]TJ
+T*[(134:)-600(   })]TJ
+T*[(135:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(136:)-600(})]TJ
+(137:)'
+T*[(138:)-600(void mouse \(int button, int state, int, int\) {)]TJ
+T*[(139:)-600(   if \(state == GLUT_DOWN\) {)]TJ
+T*[(140:)-600(      switch \(button\) {)]TJ
+T*[(141:)-600(         case GLUT_LEFT_BUTTON:)]TJ
+T*[(142:)-600(            ++glut_fonts;)]TJ
+T*[(143:)-600(            break;)]TJ
+T*[(144:)-600(         case GLUT_MIDDLE_BUTTON:)]TJ
+T*[(145:)-600(            ++greetings;)]TJ
+T*[(146:)-600(            break;)]TJ
+T*[(147:)-600(         case GLUT_RIGHT_BUTTON:)]TJ
+T*[(148:)-600(            ++colors;)]TJ
+T*[(149:)-600(            break;)]TJ
+T*[(150:)-600(      })]TJ
+T*[(151:)-600(   })]TJ
+T*[(152:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(153:)-600(})]TJ
+(154:)'
+ET
+Q
+Q
+endstream
+endobj
+25 0 obj
+2432
+endobj
+29 0 obj
+<</Length 30 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(4)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/4)Tj
+/R12 14 Tf
+-275.02 -2.7 Td
+(hello-world.cpp)Tj
+-119.97 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 57.2 718 Tm
+(155:)Tj
+12 TL
+T*[(156:)-600(void reshape \(int width, int height\) {)]TJ
+T*[(157:)-600(   window.width = width;)]TJ
+T*[(158:)-600(   window.height = height;)]TJ
+T*[(159:)-600(   glMatrixMode \(GL_PROJECTION\);)]TJ
+T*[(160:)-600(   glLoadIdentity\(\);)]TJ
+T*[(161:)-600(   glOrtho \(0, window.width, 0, window.height, -1, +1\);)]TJ
+T*[(162:)-600(   glMatrixMode \(GL_MODELVIEW\);)]TJ
+T*[(163:)-600(   glViewport \(0, 0, window.width, window.height\);)]TJ
+T*[(164:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(165:)-600(})]TJ
+(166:)'
+T*[(167:)-600(void print_howto\(\) {)]TJ
+T*[(168:)-600(cout << R"\()]TJ
+T*[(169:)-600(To cycle the colors: right mouse button or key 'c' or 'C'.)]TJ
+T*[(170:)-600(To cycle the fonts: left mouse button or key 'f' or 'F'.)]TJ
+T*[(171:)-600(To cycle the greetings: middle mouse button or key 'g' or 'G'.)]TJ
+T*[(172:)-600(To invert the colors: key Space, Backspace, Return, or Delete.)]TJ
+T*[(173:)-600(To quit: key 'q' or 'Q' or ESC.)]TJ
+T*[(174:)-600(\)";)]TJ
+T*[(175:)-600(})]TJ
+(176:)'
+T*[(177:)-600(int main \(int argc, char** argv\) {)]TJ
+T*[(178:)-600(   print_howto\(\);)]TJ
+T*[(179:)-600(   window.name = basename \(argv[0]\);)]TJ
+T*[(180:)-600(   glutInit \(&argc, argv\);)]TJ
+T*[(181:)-600(   glutInitDisplayMode \(GLUT_RGBA | GLUT_DOUBLE\);)]TJ
+T*[(182:)-600(   glutInitWindowSize \(window.width, window.height\);)]TJ
+T*[(183:)-600(   glutInitWindowPosition \(256, 256\);)]TJ
+T*[(184:)-600(   glutCreateWindow \(window.name.c_str\(\)\);)]TJ
+T*[(185:)-600(   glutDisplayFunc \(display\);)]TJ
+T*[(186:)-600(   glutReshapeFunc \(reshape\);)]TJ
+T*[(187:)-600(   glutKeyboardFunc \(keyboard\);)]TJ
+T*[(188:)-600(   glutMouseFunc \(mouse\);)]TJ
+T*[(189:)-600(   glutMainLoop\(\);)]TJ
+T*[(190:)-600(   return 0;)]TJ
+T*[(191:)-600(})]TJ
+(192:)'
+ET
+Q
+Q
+endstream
+endobj
+30 0 obj
+2335
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-292.904 -2.7 Td
+(bonjour-le-monde.cpp)Tj
+-102.086 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(// $Id: bonjour-le-monde.cpp,v 1.9 2018-06-27 15:49:48-07 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(// Draw line from \(0,0\) to \(1,1\).)]TJ
+(4:)'
+T*[(5:)-600(#include <cmath>)]TJ
+T*[(6:)-600(#include <iostream>)]TJ
+T*[(7:)-600(#include <vector>)]TJ
+T*[(8:)-600(using namespace std;)]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(#include <GL/freeglut.h>)]TJ
+T*[(11:)-600(#include <libgen.h>)]TJ
+(12:)'
+T*[(13:)-600(struct {)]TJ
+T*[(14:)-600(   int width {384};)]TJ
+T*[(15:)-600(   int height {256};)]TJ
+T*[(16:)-600(} window;)]TJ
+(17:)'
+T*[(18:)-600(const GLubyte BLEU[] {0, 85, 164};)]TJ
+T*[(19:)-600(const GLubyte BLANC[] {255, 255, 255};)]TJ
+T*[(20:)-600(const GLubyte ROUGE[] {239, 65, 53};)]TJ
+T*[(21:)-600(const vector<const GLubyte*> colors {BLEU, BLANC, ROUGE};)]TJ
+T*[(22:)-600(constexpr GLfloat aspect_ratio = 2.0 / 3.0;)]TJ
+(23:)'
+T*[(24:)-600(void draw_french_flag\(\) {)]TJ
+T*[(25:)-600(   for \(size_t i = 0; i < 3; ++i\) {)]TJ
+T*[(26:)-600(      glBegin \(GL_POLYGON\);)]TJ
+T*[(27:)-600(      glColor3ubv \(colors[i]\);)]TJ
+T*[(28:)-600(      glVertex2f \(window.width * i / 3.0, 0\);)]TJ
+T*[(29:)-600(      glVertex2f \(window.width * \(i + 1\) / 3.0, 0\);)]TJ
+T*[(30:)-600(      glVertex2f \(window.width * \(i + 1\) / 3.0, window.height\);)]TJ
+T*[(31:)-600(      glVertex2f \(window.width * i / 3.0, window.height\);)]TJ
+T*[(32:)-600(      glEnd\(\);)]TJ
+T*[(33:)-600(   })]TJ
+T*[(34:)-600(})]TJ
+(35:)'
+T*[(36:)-600(void display\(\) {)]TJ
+T*[(37:)-600(   glClearColor \(0.0, 0.0, 0.0, 0.0\);)]TJ
+T*[(38:)-600(   glClear \(GL_COLOR_BUFFER_BIT\);)]TJ
+T*[(39:)-600(   draw_french_flag\(\);)]TJ
+T*[(40:)-600(   glutSwapBuffers\(\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+2235
+endobj
+39 0 obj
+<</Length 40 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-292.904 -2.7 Td
+(bonjour-le-monde.cpp)Tj
+-102.086 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+(43:)Tj
+12 TL
+T*[(44:)-600(void adjust_aspect \(int width, int height\) {)]TJ
+T*[(45:)-600(   if \(window.width != width\) {)]TJ
+T*[(46:)-600(      height = width * aspect_ratio;)]TJ
+T*[(47:)-600(   }else if \(window.height != height\) {)]TJ
+T*[(48:)-600(      width = height / aspect_ratio;)]TJ
+T*[(49:)-600(   }else { )]TJ
+T*[(50:)-600(      return;)]TJ
+T*[(51:)-600(   })]TJ
+T*[(52:)-600(   window.width = width;)]TJ
+T*[(53:)-600(   window.height = height; )]TJ
+T*[(54:)-600(   glutReshapeWindow \(window.width, window.height\);)]TJ
+T*[(55:)-600(})]TJ
+(56:)'
+T*[(57:)-600(void reshape \(int width, int height\) {)]TJ
+T*[(58:)-600(   adjust_aspect \(width, height\);)]TJ
+T*[(59:)-600(   window.width = width;)]TJ
+T*[(60:)-600(   window.height = height;)]TJ
+T*[(61:)-600(   glMatrixMode \(GL_PROJECTION\);)]TJ
+T*[(62:)-600(   glLoadIdentity\(\);)]TJ
+T*[(63:)-600(   gluOrtho2D \(0, window.width, 0, window.height\);)]TJ
+T*[(64:)-600(   glMatrixMode \(GL_MODELVIEW\);)]TJ
+T*[(65:)-600(   glViewport \(0, 0, window.width, window.height\);)]TJ
+T*[(66:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(67:)-600(})]TJ
+(68:)'
+T*[(69:)-600(int main \(int argc, char** argv\) {)]TJ
+T*[(70:)-600(   glutInit \(&argc, argv\);)]TJ
+T*[(71:)-600(   glutInitDisplayMode \(GLUT_RGBA | GLUT_DOUBLE\);)]TJ
+T*[(72:)-600(   glutInitWindowSize \(window.width, window.height\);)]TJ
+T*[(73:)-600(   glutInitWindowPosition \(256, 256\);)]TJ
+T*[(74:)-600(   glutCreateWindow \(basename \(argv[0]\)\);)]TJ
+T*[(75:)-600(   glutDisplayFunc \(display\);)]TJ
+T*[(76:)-600(   glutReshapeFunc \(reshape\);)]TJ
+T*[(77:)-600(   glutMainLoop\(\);)]TJ
+T*[(78:)-600(   return 0;)]TJ
+T*[(79:)-600(})]TJ
+(80:)'
+ET
+Q
+Q
+endstream
+endobj
+40 0 obj
+2233
+endobj
+44 0 obj
+<</Length 45 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-275.797 -2.7 Td
+(ciao-mondo.cpp)Tj
+-119.193 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(// $Id: ciao-mondo.cpp,v 1.5 2016-07-20 19:53:20-07 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(// Draw line from \(0,0\) to \(1,1\).)]TJ
+(4:)'
+T*[(5:)-600(#include <cmath>)]TJ
+T*[(6:)-600(#include <iostream>)]TJ
+T*[(7:)-600(#include <vector>)]TJ
+T*[(8:)-600(using namespace std;)]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(#include <GL/freeglut.h>)]TJ
+T*[(11:)-600(#include <libgen.h>)]TJ
+(12:)'
+T*[(13:)-600(struct {)]TJ
+T*[(14:)-600(   int width {384};)]TJ
+T*[(15:)-600(   int height {256};)]TJ
+T*[(16:)-600(} window;)]TJ
+(17:)'
+T*[(18:)-600(const GLubyte VERDE[] {0x00, 0x92, 0x46};)]TJ
+T*[(19:)-600(const GLubyte BIANCO[] {0xF1, 0xF2, 0xF1};)]TJ
+T*[(20:)-600(const GLubyte SCARLATTO[] {0xCE, 0x2B, 0x37};)]TJ
+T*[(21:)-600(const vector<const GLubyte*> colors {VERDE, BIANCO, SCARLATTO};)]TJ
+T*[(22:)-600(constexpr GLfloat aspect_ratio = 2.0 / 3.0;)]TJ
+(23:)'
+T*[(24:)-600(void draw_italian_flag\(\) {)]TJ
+T*[(25:)-600(   for \(size_t i = 0; i < 3; ++i\) {)]TJ
+T*[(26:)-600(      glBegin \(GL_POLYGON\);)]TJ
+T*[(27:)-600(      glColor3ubv \(colors[i]\);)]TJ
+T*[(28:)-600(      glVertex2f \(window.width * i / 3.0, 0\);)]TJ
+T*[(29:)-600(      glVertex2f \(window.width * \(i + 1\) / 3.0, 0\);)]TJ
+T*[(30:)-600(      glVertex2f \(window.width * \(i + 1\) / 3.0, window.height\);)]TJ
+T*[(31:)-600(      glVertex2f \(window.width * i / 3.0, window.height\);)]TJ
+T*[(32:)-600(      glEnd\(\);)]TJ
+T*[(33:)-600(   })]TJ
+T*[(34:)-600(})]TJ
+(35:)'
+T*[(36:)-600(void display\(\) {)]TJ
+T*[(37:)-600(   glClearColor \(0.0, 0.0, 0.0, 0.0\);)]TJ
+T*[(38:)-600(   glClear \(GL_COLOR_BUFFER_BIT\);)]TJ
+T*[(39:)-600(   draw_italian_flag\(\);)]TJ
+T*[(40:)-600(   glutSwapBuffers\(\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+ET
+Q
+Q
+endstream
+endobj
+45 0 obj
+2251
+endobj
+49 0 obj
+<</Length 50 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-275.797 -2.7 Td
+(ciao-mondo.cpp)Tj
+-119.193 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+(43:)Tj
+12 TL
+T*[(44:)-600(void adjust_aspect \(int width, int height\) {)]TJ
+T*[(45:)-600(   if \(window.width != width\) {)]TJ
+T*[(46:)-600(      height = width * aspect_ratio;)]TJ
+T*[(47:)-600(   }else if \(window.height != height\) {)]TJ
+T*[(48:)-600(      width = height / aspect_ratio;)]TJ
+T*[(49:)-600(   }else {)]TJ
+T*[(50:)-600(      return;)]TJ
+T*[(51:)-600(   })]TJ
+T*[(52:)-600(   window.width = width;)]TJ
+T*[(53:)-600(   window.height = height;)]TJ
+T*[(54:)-600(   glutReshapeWindow \(window.width, window.height\);)]TJ
+T*[(55:)-600(})]TJ
+(56:)'
+T*[(57:)-600(void reshape \(int width, int height\) {)]TJ
+T*[(58:)-600(   adjust_aspect \(width, height\);)]TJ
+T*[(59:)-600(   glMatrixMode \(GL_PROJECTION\);)]TJ
+T*[(60:)-600(   glLoadIdentity\(\);)]TJ
+T*[(61:)-600(   gluOrtho2D \(0, window.width, 0, window.height\);)]TJ
+T*[(62:)-600(   glMatrixMode \(GL_MODELVIEW\);)]TJ
+T*[(63:)-600(   glViewport \(0, 0, window.width, window.height\);)]TJ
+T*[(64:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(65:)-600(})]TJ
+(66:)'
+T*[(67:)-600(int main \(int argc, char** argv\) {)]TJ
+T*[(68:)-600(   glutInit \(&argc, argv\);)]TJ
+T*[(69:)-600(   glutInitDisplayMode \(GLUT_RGBA | GLUT_DOUBLE\);)]TJ
+T*[(70:)-600(   glutInitWindowSize \(window.width, window.height\);)]TJ
+T*[(71:)-600(   glutInitWindowPosition \(256, 256\);)]TJ
+T*[(72:)-600(   glutCreateWindow \(basename \(argv[0]\)\);)]TJ
+T*[(73:)-600(   glutDisplayFunc \(display\);)]TJ
+T*[(74:)-600(   glutReshapeFunc \(reshape\);)]TJ
+T*[(75:)-600(   glutMainLoop\(\);)]TJ
+T*[(76:)-600(   return 0;)]TJ
+T*[(77:)-600(})]TJ
+(78:)'
+ET
+Q
+Q
+endstream
+endobj
+50 0 obj
+2139
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(hallo-welt.cpp)Tj
+-124.247 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(// $Id: hallo-welt.cpp,v 1.7 2016-07-20 19:53:20-07 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(// Draw line from \(0,0\) to \(1,1\).)]TJ
+(4:)'
+T*[(5:)-600(#include <cmath>)]TJ
+T*[(6:)-600(#include <iostream>)]TJ
+T*[(7:)-600(#include <vector>)]TJ
+T*[(8:)-600(using namespace std;)]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(#include <GL/freeglut.h>)]TJ
+T*[(11:)-600(#include <libgen.h>)]TJ
+(12:)'
+T*[(13:)-600(struct {)]TJ
+T*[(14:)-600(   int width {385};)]TJ
+T*[(15:)-600(   int height {231};)]TJ
+T*[(16:)-600(} window;)]TJ
+(17:)'
+T*[(18:)-600(const GLubyte SCHWARZ[] {0x00, 0x00, 0x00};)]TJ
+T*[(19:)-600(const GLubyte ROT[] {0xFF, 0x00, 0x00};)]TJ
+T*[(20:)-600(const GLubyte GOLD[] {0xFF, 0xCC, 0x00};)]TJ
+T*[(21:)-600(const vector<const GLubyte*> colors {GOLD, ROT, SCHWARZ};)]TJ
+T*[(22:)-600(constexpr GLfloat aspect_ratio = 3.0 / 5.0;)]TJ
+(23:)'
+T*[(24:)-600(void draw_german_flag\(\) {)]TJ
+T*[(25:)-600(   for \(size_t i = 0; i < 3; ++i\) {)]TJ
+T*[(26:)-600(      glBegin \(GL_POLYGON\);)]TJ
+T*[(27:)-600(      glColor3ubv \(colors[i]\);)]TJ
+T*[(28:)-600(      glVertex2f \(0, window.height * i / 3.0\);)]TJ
+T*[(29:)-600(      glVertex2f \(0, window.height * \(i + 1\) / 3.0\);)]TJ
+T*[(30:)-600(      glVertex2f \(window.width, window.height * \(i + 1\) / 3.0\);)]TJ
+T*[(31:)-600(      glVertex2f \(window.width, window.height * i / 3.0\);)]TJ
+T*[(32:)-600(      glEnd\(\);)]TJ
+T*[(33:)-600(   })]TJ
+T*[(34:)-600(})]TJ
+(35:)'
+T*[(36:)-600(void display\(\) {)]TJ
+T*[(37:)-600(   glClearColor \(0.0, 0.0, 0.0, 0.0\);)]TJ
+T*[(38:)-600(   glClear \(GL_COLOR_BUFFER_BIT\);)]TJ
+T*[(39:)-600(   draw_german_flag\(\);)]TJ
+T*[(40:)-600(   glutSwapBuffers\(\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+2239
+endobj
+59 0 obj
+<</Length 60 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-270.743 -2.7 Td
+(hallo-welt.cpp)Tj
+-124.247 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+(43:)Tj
+12 TL
+T*[(44:)-600(void adjust_aspect \(int width, int height\) {)]TJ
+T*[(45:)-600(   if \(window.width != width\) {)]TJ
+T*[(46:)-600(      height = width * aspect_ratio;)]TJ
+T*[(47:)-600(   }else if \(window.height != height\) {)]TJ
+T*[(48:)-600(      width = height / aspect_ratio;)]TJ
+T*[(49:)-600(   }else { )]TJ
+T*[(50:)-600(      return;)]TJ
+T*[(51:)-600(   })]TJ
+T*[(52:)-600(   window.width = width;)]TJ
+T*[(53:)-600(   window.height = height; )]TJ
+T*[(54:)-600(   glutReshapeWindow \(window.width, window.height\);)]TJ
+T*[(55:)-600(})]TJ
+(56:)'
+T*[(57:)-600(void reshape \(int width, int height\) {)]TJ
+T*[(58:)-600(   adjust_aspect \(width, height\);)]TJ
+T*[(59:)-600(   window.height = height;)]TJ
+T*[(60:)-600(   window.width = width;)]TJ
+T*[(61:)-600(   glMatrixMode \(GL_PROJECTION\);)]TJ
+T*[(62:)-600(   glLoadIdentity\(\);)]TJ
+T*[(63:)-600(   gluOrtho2D \(0, window.width, 0, window.height\);)]TJ
+T*[(64:)-600(   glMatrixMode \(GL_MODELVIEW\);)]TJ
+T*[(65:)-600(   glViewport \(0, 0, window.width, window.height\);)]TJ
+T*[(66:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(67:)-600(})]TJ
+(68:)'
+T*[(69:)-600(int main \(int argc, char** argv\) {)]TJ
+T*[(70:)-600(   glutInit \(&argc, argv\);)]TJ
+T*[(71:)-600(   glutInitWindowSize \(window.width, window.height\);)]TJ
+T*[(72:)-600(   glutInitWindowPosition \(256, 256\);)]TJ
+T*[(73:)-600(   glutCreateWindow \(basename \(argv[0]\)\);)]TJ
+T*[(74:)-600(   glutDisplayFunc \(display\);)]TJ
+T*[(75:)-600(   glutReshapeFunc \(reshape\);)]TJ
+T*[(76:)-600(   glutMainLoop\(\);)]TJ
+T*[(77:)-600(   return 0;)]TJ
+T*[(78:)-600(})]TJ
+(79:)'
+ET
+Q
+Q
+endstream
+endobj
+60 0 obj
+2158
+endobj
+64 0 obj
+<</Length 65 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-291.735 -2.7 Td
+(konnichiwa-sekai.cpp)Tj
+-103.255 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(// $Id: konnichiwa-sekai.cpp,v 1.1 2016-06-30 17:35:43-07 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(// Draw line from \(0,0\) to \(1,1\).)]TJ
+(4:)'
+T*[(5:)-600(#include <cmath>)]TJ
+T*[(6:)-600(#include <iostream>)]TJ
+T*[(7:)-600(#include <vector>)]TJ
+T*[(8:)-600(using namespace std;)]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(#include <GL/freeglut.h>)]TJ
+T*[(11:)-600(#include <libgen.h>)]TJ
+(12:)'
+T*[(13:)-600(struct {)]TJ
+T*[(14:)-600(   int width {384};)]TJ
+T*[(15:)-600(   int height {256};)]TJ
+T*[(16:)-600(} window;)]TJ
+(17:)'
+T*[(18:)-600(const GLubyte WHITE[] {255, 255, 255};)]TJ
+T*[(19:)-600(const GLubyte CRIMSON_GLORY[] {188, 0, 45};)]TJ
+T*[(20:)-600(constexpr GLfloat aspect_ratio = 2.0 / 3.0;)]TJ
+(21:)'
+T*[(22:)-600(void draw_japanese_flag\(\) {)]TJ
+T*[(23:)-600(   glBegin \(GL_POLYGON\);)]TJ
+T*[(24:)-600(   glColor3ubv \(WHITE\);)]TJ
+T*[(25:)-600(   glVertex2f \(0, 0\);)]TJ
+T*[(26:)-600(   glVertex2f \(window.width, 0\);)]TJ
+T*[(27:)-600(   glVertex2f \(window.width, window.height\);)]TJ
+T*[(28:)-600(   glVertex2f \(0, window.height\);)]TJ
+T*[(29:)-600(   glEnd\(\);)]TJ
+T*[(30:)-600(   glBegin \(GL_POLYGON\);)]TJ
+T*[(31:)-600(   glColor3ubv \(CRIMSON_GLORY\);)]TJ
+T*[(32:)-600(   const GLfloat delta = 2 * M_PI / 64;)]TJ
+T*[(33:)-600(   const GLfloat radius = window.height * 3.0 / 10.0;)]TJ
+T*[(34:)-600(   const GLfloat xoffset = window.width / 2.0;)]TJ
+T*[(35:)-600(   const GLfloat yoffset = window.height / 2.0;)]TJ
+T*[(36:)-600(   for \(GLfloat theta = 0; theta < 2 * M_PI; theta += delta\) {)]TJ
+T*[(37:)-600(      GLfloat xpos = radius * cos \(theta\) + xoffset;)]TJ
+T*[(38:)-600(      GLfloat ypos = radius * sin \(theta\) + yoffset;)]TJ
+T*[(39:)-600(      glVertex2f \(xpos, ypos\);)]TJ
+T*[(40:)-600(   })]TJ
+T*[(41:)-600(   glEnd\(\);)]TJ
+T*[(42:)-600(})]TJ
+(43:)'
+T*[(44:)-600(void display\(\) {)]TJ
+T*[(45:)-600(   glClearColor \(0.0, 0.0, 0.0, 0.0\);)]TJ
+T*[(46:)-600(   glClear \(GL_COLOR_BUFFER_BIT\);)]TJ
+T*[(47:)-600(   draw_japanese_flag\(\);)]TJ
+T*[(48:)-600(   glutSwapBuffers\(\);)]TJ
+T*[(49:)-600(})]TJ
+(50:)'
+ET
+Q
+Q
+endstream
+endobj
+65 0 obj
+2620
+endobj
+69 0 obj
+<</Length 70 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:14)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(2)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/2)Tj
+/R12 14 Tf
+-291.735 -2.7 Td
+(konnichiwa-sekai.cpp)Tj
+-103.255 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 63.8 718 Tm
+(51:)Tj
+12 TL
+T*[(52:)-600(void adjust_aspect \(int width, int height\) {)]TJ
+T*[(53:)-600(   if \(window.width != width\) {)]TJ
+T*[(54:)-600(      height = width * aspect_ratio;)]TJ
+T*[(55:)-600(   }else if \(window.height != height\) {)]TJ
+T*[(56:)-600(      width = height / aspect_ratio;)]TJ
+T*[(57:)-600(   }else { )]TJ
+T*[(58:)-600(      return;)]TJ
+T*[(59:)-600(   })]TJ
+T*[(60:)-600(   window.width = width;)]TJ
+T*[(61:)-600(   window.height = height; )]TJ
+T*[(62:)-600(   glutReshapeWindow \(window.width, window.height\);)]TJ
+T*[(63:)-600(})]TJ
+(64:)'
+T*[(65:)-600(void reshape \(int width, int height\) {)]TJ
+T*[(66:)-600(   adjust_aspect \(width, height\);)]TJ
+T*[(67:)-600(   window.width = width;)]TJ
+T*[(68:)-600(   window.height = height;)]TJ
+T*[(69:)-600(   glMatrixMode \(GL_PROJECTION\);)]TJ
+T*[(70:)-600(   glLoadIdentity\(\);)]TJ
+T*[(71:)-600(   gluOrtho2D \(0, window.width, 0, window.height\);)]TJ
+T*[(72:)-600(   glMatrixMode \(GL_MODELVIEW\);)]TJ
+T*[(73:)-600(   glViewport \(0, 0, window.width, window.height\);)]TJ
+T*[(74:)-600(   glutPostRedisplay\(\);)]TJ
+T*[(75:)-600(})]TJ
+(76:)'
+T*[(77:)-600(int main \(int argc, char** argv\) {)]TJ
+T*[(78:)-600(   glutInit \(&argc, argv\);)]TJ
+T*[(79:)-600(   glutInitDisplayMode \(GLUT_RGBA | GLUT_DOUBLE\);)]TJ
+T*[(80:)-600(   glutInitWindowSize \(window.width, window.height\);)]TJ
+T*[(81:)-600(   glutInitWindowPosition \(256, 256\);)]TJ
+T*[(82:)-600(   glutCreateWindow \(basename \(argv[0]\)\);)]TJ
+T*[(83:)-600(   glutDisplayFunc \(display\);)]TJ
+T*[(84:)-600(   glutReshapeFunc \(reshape\);)]TJ
+T*[(85:)-600(   glutMainLoop\(\);)]TJ
+T*[(86:)-600(   return 0;)]TJ
+T*[(87:)-600(})]TJ
+(88:)'
+ET
+Q
+Q
+endstream
+endobj
+70 0 obj
+2233
+endobj
+74 0 obj
+<</Length 75 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 G
+380 240 5360 7080 re
+S
+5 w
+0 0 0 RG
+380 7320 m
+5700 7320 l
+380 7320 m
+1100 7320 l
+1100 7680 l
+380 7680 l
+h
+S
+0 0 0 rg
+q
+10 0 0 10 0 0 cm BT
+/R8 12 Tf
+1 0 0 1 52.6641 752 Tm
+(06/27/18)Tj
+-0.659766 -12.8 Td
+(15:51:12)Tj
+ET
+Q
+4980 7320 720 360 re
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 28.8 Tf
+1 0 0 1 518.488 739.2 Tm
+(1)Tj
+/R10 18 Tf
+16.0129 0 Td
+(/1)Tj
+/R12 14 Tf
+-255.77 -2.7 Td
+(Makefile)Tj
+-139.22 18 Td
+($cmps109-wm/Assignments/lab4-x11-opengl/hello-world/)Tj
+ET
+Q
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R14 11 Tf
+1 0 0 1 70.4 718 Tm
+[(1:)-600(# $Id: Makefile,v 1.12 2018-06-27 15:51:12-07 - - $)]TJ
+12 TL
+(2:)'
+T*[(3:)-600(GPP  = g++ -std=gnu++17 -g -O0 -Wall -Wextra -Wold-style-cast)]TJ
+T*[(4:)-600(LIBS = -lglut -lGLU -lGL -lX11 -lrt -lm)]TJ
+(5:)'
+T*[(6:)-600(SOURCES  = hello-world.cpp bonjour-le-monde.cpp ciao-mondo.cpp \\)]TJ
+T*[(7:)-600(           hallo-welt.cpp konnichiwa-sekai.cpp)]TJ
+T*[(8:)-600(BINARIES = ${SOURCES:.cpp=})]TJ
+(9:)'
+-6.6 -12 Td
+[(10:)-600(all : ${BINARIES})]TJ
+(11:)'
+T*[(12:)-600(% : %.cpp)]TJ
+T*[(13:)-600(        ${GPP} $< -o $@ ${LIBS})]TJ
+(14:)'
+T*[(15:)-600(ci : ${SOURCES} Makefile)]TJ
+T*[(16:)-600(        cpplint.py.perl ${SOURCES})]TJ
+T*[(17:)-600(        checksource ${SOURCES} Makefile)]TJ
+T*[(18:)-600(        cid + ${SOURCES} Makefile)]TJ
+(19:)'
+T*[(20:)-600(clean :)]TJ
+T*[(21:)-600(        - rm ${BINARIES} Listing.ps Listing.pdf)]TJ
+(22:)'
+T*[(23:)-600(test : all)]TJ
+T*[(24:)-600(        for exec in ${BINARIES}; do $$exec & done)]TJ
+(25:)'
+T*[(26:)-600(lis : ${SOURCES})]TJ
+T*[(27:)-600(        mkpspdf Listing.ps ${SOURCES} Makefile)]TJ
+(28:)'
+T*[(29:)-600(again :)]TJ
+T*[(30:)-600(        ${MAKE} clean ci all lis test)]TJ
+(31:)'
+ET
+Q
+Q
+endstream
+endobj
+75 0 obj
+1703
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 16 0 R
+/Font 17 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+18 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 21 0 R
+/Font 22 0 R
+>>
+/Contents 19 0 R
+>>
+endobj
+23 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 26 0 R
+/Font 27 0 R
+>>
+/Contents 24 0 R
+>>
+endobj
+28 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 31 0 R
+/Font 32 0 R
+>>
+/Contents 29 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 36 0 R
+/Font 37 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+38 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 41 0 R
+/Font 42 0 R
+>>
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 46 0 R
+/Font 47 0 R
+>>
+/Contents 44 0 R
+>>
+endobj
+48 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 51 0 R
+/Font 52 0 R
+>>
+/Contents 49 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 56 0 R
+/Font 57 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+58 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 61 0 R
+/Font 62 0 R
+>>
+/Contents 59 0 R
+>>
+endobj
+63 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 66 0 R
+/Font 67 0 R
+>>
+/Contents 64 0 R
+>>
+endobj
+68 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 71 0 R
+/Font 72 0 R
+>>
+/Contents 69 0 R
+>>
+endobj
+73 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 76 0 R
+/Font 77 0 R
+>>
+/Contents 74 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+18 0 R
+23 0 R
+28 0 R
+33 0 R
+38 0 R
+43 0 R
+48 0 R
+53 0 R
+58 0 R
+63 0 R
+68 0 R
+73 0 R
+] /Count 13
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+/Metadata 83 0 R
+>>
+endobj
+7 0 obj
+<</Type/ExtGState
+/OPM 1>>endobj
+16 0 obj
+<</R7
+7 0 R>>
+endobj
+17 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+21 0 obj
+<</R7
+7 0 R>>
+endobj
+22 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+26 0 obj
+<</R7
+7 0 R>>
+endobj
+27 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+31 0 obj
+<</R7
+7 0 R>>
+endobj
+32 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+36 0 obj
+<</R7
+7 0 R>>
+endobj
+37 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+41 0 obj
+<</R7
+7 0 R>>
+endobj
+42 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+46 0 obj
+<</R7
+7 0 R>>
+endobj
+47 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+51 0 obj
+<</R7
+7 0 R>>
+endobj
+52 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+56 0 obj
+<</R7
+7 0 R>>
+endobj
+57 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+61 0 obj
+<</R7
+7 0 R>>
+endobj
+62 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+66 0 obj
+<</R7
+7 0 R>>
+endobj
+67 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+71 0 obj
+<</R7
+7 0 R>>
+endobj
+72 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+76 0 obj
+<</R7
+7 0 R>>
+endobj
+77 0 obj
+<</R14
+14 0 R/R8
+8 0 R/R12
+12 0 R/R10
+10 0 R>>
+endobj
+14 0 obj
+<</BaseFont/MLNNIT+Courier-Bold/FontDescriptor 15 0 R/Type/Font
+/FirstChar 32/LastChar 125/Widths[
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 0
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600
+600 600 600 600 600 600 600 600 600 600 600 600 600 600]
+/Encoding 82 0 R/Subtype/Type1>>
+endobj
+82 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+39/quoteright]>>
+endobj
+8 0 obj
+<</BaseFont/MUVSLZ+Times-Bold/FontDescriptor 9 0 R/Type/Font
+/FirstChar 47/LastChar 58/Widths[ 278
+500 500 500 0 500 500 500 500 500 0 333]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+12 0 obj
+<</BaseFont/SFCKYZ+Times-Roman/FontDescriptor 13 0 R/Type/Font
+/FirstChar 36/LastChar 120/Widths[ 500 0 0 0 0 0 0 0 0 333 250 278
+500 500 0 0 500 0 0 0 0 500 0 0 0 0 0 0
+0 722 0 0 0 0 0 0 0 0 0 0 0 889 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500
+500 0 333 389 278 500 0 722 500]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/ZRKBEE+Helvetica-Bold/FontDescriptor 11 0 R/Type/Font
+/FirstChar 47/LastChar 52/Widths[ 278
+0 556 556 556 556]
+/Encoding/WinAnsiEncoding/Subtype/Type1>>
+endobj
+15 0 obj
+<</Type/FontDescriptor/FontName/MLNNIT+Courier-Bold/FontBBox[-21 -205 623 695]/Flags 7
+/Ascent 695
+/CapHeight 597
+/Descent -205
+/ItalicAngle 0
+/StemV 150
+/AvgWidth 600
+/MaxWidth 600
+/MissingWidth 600
+/XHeight 451
+/CharSet(/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/a/ampersand/asciicircum/asterisk/at/b/backslash/bar/braceleft/braceright/bracketleft/bracketright/c/colon/comma/d/dollar/e/eight/equal/exclam/f/five/four/g/greater/h/hyphen/i/j/k/l/less/m/n/nine/numbersign/o/one/p/parenleft/parenright/percent/period/plus/q/quotedbl/quoteright/r/s/semicolon/seven/six/slash/space/t/three/two/u/underscore/v/w/x/y/z/zero)/FontFile3 78 0 R>>
+endobj
+78 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 10524>>stream
+Gatm>#ujjT\ip.8Eiuh()NP&='@8ed>'mBZFfa.#k5c,E,!q[64=(E(J?T=]8I-Jj0SLX%T\t?X
+>/r\relk.\gYUe5><?,#[I$/l:#C9o,_SIVn#j.V&fG`8fu$%%s7cKhE!Qt5K#?P0]0`#)-OP^"
+\Qg,bTD`.U1QKAckf19rSqM]e\3F-:I>M'553gi!i>aQ,*=V\@H?&BO;,$NOnFMc=nf6W6iM>NP
+<et6`j$]SL$/SUhDqR-nqXbZ=T?M`N[F`(cV7NgSY7-7(KgpDb_S7@M7#GKK6D>-"pKiF>Nf4YU
+H\Y(f`e;<X#OUCjZCcP]7o3_eK_HrnUaRQZSE)hE`Dl;OF6:];M8(Y3'h.L_N;)0ONYZuFpL^n]
+mh:9qFt\d1[9W(-,0#+Dls"J1i`@M?S[^"\D0""7P^VjrK/]UnpC5f#?rQ:OYUuTOiS,Qb8+)2e
+\U-g(bWW;hR6=%q=#r!_r[S@_p&;#<_XXg(=S21M',OGjA+H*fVCnDT0V'?+',ue[L^D!H@M/,c
+Z'fj-Qq2$:-4sI=ai$)H$F-.h9'd[t&Nbj6`%GLZ0n\s?<Y.%nIps]YM[1H^,%_LhLcNCg@P71/
+0ooF(bU:sSY7U#U"iP`H<FQ(#=2L;+8A%5N9>!iT+I3Q`M5A.3`:Lob@MBDFn;0<HBS%SN&2+S7
+_NSp`]Ei^j/E&mR,Ik[M"A-6on-B%\&OPJ1`%]&`G_T<o$mu+]oC5Pq3;_K;G.Z\XF$K)tQ0Z`O
+ci&IFnj4d_])@tc@I&Yrs3+Q^pCI;eZZ.52&OdqB5<&/D/'g^J%nBdt1\neF?9S-Dg-GZnB%`R/
+?c_than';OqQ]q;rc;>hMtDqYQU1gmJnVuM#nMA9nW*/mnG^j+i3UZUc:?i7AGiCr.H<Xb0Qr%[
+_P<I(?iFbK`5HRAIQqPhUtA9=SigG%q36acT2,?2g=U,ae'R_31M4na32:l@cSHB^r,gN@=Z*O`
+1I$q.IKoMhG.?&MAEPYM^j1%pAo7Yf$^>pWPuKA3")1#pQ'TR88jdJ*TV.CJ"Jm#R@@9l'#%h7@
+P\'&h>.I*2:]Q^GM'C%YkHcqSV#+;_?E%"1!Hjr$Zb-!P5`RLE3QJ#6X3s`KT\$tFos/%\-3d9Q
+AG'LdoX!"[/pS7Nj0B'$^p!+`Q;Km#@>+R_r^jV`=[UL\'gN56eBtg@W?;C5<2CV[UQA0gMZX<o
+4M,qj;Q[k[f6;/P__nK$B6n;n'jOE&5<F4ldG-JEROu?_LfX'>-`0Akjdm1cX5@Zk`l.HH!k=O$
+Y,!$F4qq>0YB1<-#"6mi5g$?6VTltd#hV_d\^:(iIT8CAn,aqJ=h8CS\RZnGj=6B3EeOWe6)$Q\
+Q9G[r4D-oS]hqi<Wk<Z0-3hs>;@2nZVJE),Q)Um#3"Klq7#R-kpHW1[Ur2C_S]\K;p\r/qP[#ih
+quVY#5"*<+eB+[4b00%&Vs\=k.M'XFm(a+OgS'[Ve.6_i@GcYgrp()<>"Zdr*8,,[;RohBbcSl@
+SgNF#]/P2M0'ZQd,31O-ROagf`r<L;6c9_4U@.3mjYGG/17b^=>mmSddZ/]gkQAMCf8miT#Pprn
+&0`aLVVubZNctmg.Vkjps&Z8>*#h+#<0XstJ6+,'_[8KgQlY%h]>KQN%N8&-ge#R#NIg06OSq[5
+Jn#p_aN)@lQoCH4k16D@935u%2fI7.:HlI7krYSKMbL@/!t4T0O._qr$_a)k+V3bgW^29d<UsTZ
+l`/WK>i/g7PY14O1XV-5<A.NK$tZ*ciMoT<.`^rJE)?8>MMe?-D&:">OIV4UY3!V2P%1<uO/68\
+PSFlSHo`:Po@K.M\`n9L[U!D]eV&?*LY9gTV>7U%gVU<Za.ZXL(`Is3&[()d)=TZI%c@3JKC["q
+K'&L//#]?1&uoFs1:+<m">O?cZ;bhl@)X0PU#BqHZjUgAIf9&J?^b3[dQ0\-7%[<nIkY3(e1.g4
+UT,#q5abY[>--2;J6M4[4A_NF<Ttq2S2.WCQT?`.A?%C_fl05CG0%!WV4I4_*HknM/q9KW(OSPi
+Ka!N-hnbG:T("Q,h@Lq=ne[lc'G&5ODh;F[(gM;olLL54O#$F/>d&*7$X?G-!CNLO<B@3,e&2<&
+1C9s7!H^D:P$=.9P:@&mE9aP7ILG<8G2@,<BW\HP==m7YA&&u=%,]A+aUTVAXatX6#LOCVcWr?R
+Rlh7[;&%1G;Nonk]6t]uUHX@3H0@R2T0&J2LJ)p.RTHT=aii+SG_n\cOC]nQl7<K:Xl/kGJ;mEE
+GQ6;jLErZb33l!:Eq`o2)fW4]bdib_2:oVal4acS73:r$1eE57aM(M<79$*)("g.n1rG)d]^t';
+jA8slaRftp9a1+'Y)G&SA7S)Qk!m_T&P[Fnf'^hb(f,(ip6;Nk4k;5\a65X=4o<1&K^gp^eY&][
+7/'qTe/m'<=HI5[rmcA4F>O2]Ho)'8YFIGWSJ.`3Ya,4>H[[Ii;F7,lKlJOc=V(i?,(3]bFB(p@
+BECmC/bN,pMC*au[m/f(#<d%t"qGVWmXR=if1H[oCZL1iS^`Vs;<IG)*`sl4jT-AMaOB8';TiQ(
+L1268?m!I0dOAPBLm$`;_[jq^Ei*0<"Z?]_le9W';"/crWJfX9FhK*G"a0`MR0Yd)"LVuM[SBjM
+E<^qkQB!=o!&:kpl'rmsAbPrn;4k\?a`p1^?j!Q6BH3EE;K>d=1O@'k3M"!9mkBoAmU(\h[7f*\
+Z(46L";8Sn,_+,&59?e<*+oENm'7%I1"uu4]'=$7\^HRM(.MIP$t6pnKVZ;qZ*2P8f]YAd#;1WV
+BX4kYe'50>KBjNa^`'j$#JFI3g,!M`\Kg;Y#1r8%3?D300K=N+H<8%7B(/*$9*AsSC?%Hs319-4
+#PXo2N.>g6bY38F2C'4&fNQ(deJmujfRR\tF\"(r;RnPO+kU/9:[?>9i.<Pa0>8&-]qrSi<L#RV
+AYl+X*FqtQ4-J34%k=tV$fm'g``Tkrm+lc;1V1GKcCiZ[9T!je$FBs_]!dj0Z:fGAoFG$;m"dh(
+:5psM**fdK^J:]L:G7qHa`Kd<Q(Kt,4k:lS[L!q(NpRnL8CS/iU7QsTdl+>U$u0'1_3npdE:m'j
+>r.uO@p_ZZV!V4dJG$^]9N3*J9g8t;;`Aroe'cq!eBi0_F:m:/SVd1sD'T*M9!,`Be$]&M@[m[q
+o0<c)FM6,]dM*g&AB"jSqNl"'YCX*$4*L&E&\/<$TiUa">ICNdpR^pP3r7alF)\;K?`,<MiJ[&A
+/2!\C%\Re9/Ig=A&>bGkZCIEiXgpqc%@co^CfD:.V<3R'#"F&#9H?S7jK#b65k<]9F7gEe&[S/F
+e53TLlBj-!>+R(nP7Wh`",$YoEFu2M=KM[j:)4%Dm4ci&_4378cA%%17Qs`,J2ib'=OXU/:ss4o
+TOR\,;aEi4W:(OOP6Q=<=#(e#ai_tT'Fr0MOYm+TOMSqalJ^rae>?KNMsm=Br=+<Z=SaBqFOWN(
+oO2ea_i?/Ta$GpFR:7Q)%*U8nbHPd(S_N-ZquF-%>^]'I)fTZ^^Sok>6^j0c:D:GUCoZ.B(=a7O
+/E8"c!#gifVl5+fH%#LqP8EuC5:=!NP3I`t'p:aK(gRt,4C#,[Y_t_[!$:jVOpg?-.W^e`0Oa]h
+P=R)"p;%nt!KNfb#=`Y?#;'EqUENG(Be%Oe]9.cMUMm](nIPCHGOSf"*+[jOKBTqX)i!$im4\qF
+,Qlf]dX]/[JcaI5D%HCM3^SG6>^94F6=OVS-kHEAcG,85M$7Ks5;qL(k#_u(b56)&hi]XD/)[/`
+=Nd[eo+CIUeSCt)i>VPN>/S$LrW@W$UgXA\X'\uR,*Vj1Q#6gd\6:U)N+Vq'H//5V7Po$JS666,
+GZ.p<?!fAG(hIkL.2G#<9=-"Q=oC5ScLZg/q"D4Ibs(FFDc$7kXd'=T3<oHdLUp>]4;dmU^cgcQ
+b:]HMI`jLp!X-U^RR%Q$?(#BT))VZDJdt.`@2#;Oe4W6I"Q$lPaFX[O&$1ZEitid^%0MaBZ7gSI
+>e+=F4Y>UlRL_RFD5+.HgB"]@gg#!_g>NR2>B?$G_O`I\_,23HdoXl0QZ?Ti.5\jK\dbT/4YedE
+%"u8&?hlUsQ#NU5HR4\KG3Ql8K&r.#P#NP.$2X9d"^6UlHGZY:Gsb*@[%X8SIjpu<L0eUsDmh?L
+J]Tb@KPo$<I:Al(HZT%0:CP[/1Fb/-rB,MSQqQq9j^+SgmnbC\%dIdEe_k*lD:(a.>1?o,ir!Yr
+Od1e5_E747iZ"e[VLSe&4?gqbEK\rI&aVuX^.6:CNgt^_]lN.i#E>[5\tN2*/=$]0l<[Gd%[6'B
+gG5p^O28fXNY<E\CG(1-i;NGoJL:LpCopqL2M0bJ]cmeYoqP<8`lraK9jF(lKEG)_-n\77,KeXJ
+W;4.DmPYrPC28M]>Ee#>+.WGq37&N-L<+`Y&r$qaj%E\U/V>ln\p_dj_JQ(^!hSDH/7"[','Zjs
+^f96NcRtm"+bDe$+D/0a!p3^>W<.j!ZUpP(pbo[7`$pmsr8-1eEU$je*5s-8`ZN=+FETqGN&6l#
+p2/ZBb>T@#W#d_g/k3uaAi,Jr>Bj&34@pjOD[Fd/_,d!gIPRAM>IgL\=El1N>11`ainQ5p>M:U.
+XdJ2&Yh73bk:#DCfVIl('NMeT?Zn,Pl7\X\^H>tAZ!)jiqGuWZE!!DfXZ/t2j9JTk'/_8A8ujB+
+X*@dekireV=@O=;_`J^'5(hl50,b<f#J&`SclF1gU14:^95jB\E@"tao#U<GK.mVm7\Xn$'+&%o
+(NE"Fao&e6TH9F+P&djLYmOp1)V*(D*,R-[a*RA'h/=L80[AsQjfBBZ^g*s`bFjmm7Ft5O@G/69
+V60U!FWI!p6Uk&!?-'+Yf2([$J^bBV=Dn7ab=nB]!W*^#dQ[c[F6)3?h560>$.t[\peKa/nXI?u
+Ybl#*a.A<8/gc!uldO80o.<oYU^!K"0CG%&!$7pt*@Y)0B+,$=+MsCq!?_Au9#Ypmf(:<9%%<."
+[C'ftT'hf!GO2O:-fQmN5XRo*JGXjg-JL#n)]`YViXfeId!9jQSKq&=o-,"@rY1I9s3*jdq[.CF
+_0bpj[<&P`=@s[s5ll"QLo-n<aC?Fb6n^mPF?'0k0BJL`Jsqi8,HtSP>88C/<9Ij#B#hsR"G6GW
+LFqI7<H+!OHhU.U*Lmn3_bAf5=6kZ@Bnu_BpO8_0JOZumoB7L-(qft?:H/a-J:.,)>kh7YBBu`.
+GBC!iHQ*bNNsC0,Km:]+[9:tU0)?W0TuRu,s'+]EV17K<$Gb\m@nH^m!J&RUC=?D/VE32&L==hU
+Aq<7McRT'][BcgH>&''H(.RN=(C/p2SlrL5[dZQ??k"lF6&k8Ul@7:&rN4g5Z\6U,YhS+tLY,?"
+NNMBUl$noSK22#p1Q@15:Oru_]$L<pnHC=h+Q`M395XINV033fn3,\`o%((M/R*kE<XI/-dL"(R
+\anqqcD+Od7!a>]J/OO_1j7khjFo^GR1.--4'pLn+l()lGp%Km!2IFSXnlr!p)kOAbIbLqi=j\e
+H%[sg#oCs\^UIqAMY3I)/D5"(j#bkqI*2:$9sh+6Dm6%pBBIi:3C;j3rZ51:U:#8MTE,ip8'-nY
++"poE!2)CW(SO^q,rF'c:VN^N2Lbc-J8KKtbU7`rD"Nr_Etgl3M6#X<7=%[Z6#aKtRNBp=:n:OJ
+6h0J?:*7]\*S1:-\s=h88T2Pac'DHHSY]4W'*KbPnm!Wb!m:Fo,)X-*(D2!JG+97Wk/HL[9hZ#@
+L*tLlSj,INaE<1aHW8?DqV]X?B$gQCTFWhTO\[&8oI<0<#72CffOFQa?laOW6C$LDBE/e#k&b\@
+_+YuGck9Bo3G.Su)WG3E*Wu%=O&K"s4_\:!^<b(fanp[\)@DM/_Zc'^NH9bh*;pOr9R7ekF\\_"
+4rnDcbeT+B1i\&g+G9Z:TOW3CS[QG6_0,%p\TcC;!K-o,A<<4ma9CTdhu`,Y]?q4qf5F%??[De4
+MdJujBK0f/%\W9q#fK&O'je_l<ec02_<4@D7LW"1i6MMR],+jEOSjmuN.ja=`ku4JX`D^RO(&#t
+GK._VBO&?[.\4Gt(9h<l=30C<Wno2XKqEd2eriU/)KqX1(,i$Jb&1g>OD2k:bc8fB-=]?HGB<Pb
+2='R4A-,1?!6Sc]/u(,VafR>0S%WT^HV@"d9uR>hB#0nfo,7#V[D$b__oLq<g4L>uOgQ@P=%l8H
+fpZH"@YqH1L\L>aVX)i/`rt]2`=W(a48S<`hEDn5S*]9P^((P-JBnA'(1]N^cCu]B#iOQ6B)<RH
+oH4.U,/E)c'f(@(_B@(@eSKU=F5]t74Yn-C6h]$MA+ngIOFu$E(JIgPB,91F&0/s1IZ5S^]rMia
++.>KCs*GQ3m9nE'C</G81,Mt5l/=.fRc%@^mkb(uUs"aYk%&)ba?Y'\IMdg?c<t:13'"lJoEt5A
+_g^V!>_K^rflc?^o"[P``HK7lR@8S$DFg]#?S>a3L#4p%.0c+Pr*+RP"b)!8-#K_n;0]3BYN3Ic
+i#@Ui>LPkofZAhMInDL:'-'JYV!hpqPq+ecGu"Fp"q&7AI?mp%06W<&:Y/!6VR>M_W.>1Sg9t>C
+HT_55jBZ^*S2)+'\obUQ,.QH'L).D41Ft_ml94*hJ5dX?Q5Y)_ZYT*[M:iCYr]Dp+nhM'.FV2>]
+UR0qfDT.-T=Do;#X8bT0`alDJQ`JB;!4\pWg%,4NK:(^l:n4^>n1kdt/\of<<Im7;=O\HD;/4X(
+J>sdi*$VlHTf`/E!ri]$_8nI6=1Y2X=:eW#HA"FOk(P'EF_l,[*8'Y15s5,_c%dc@lGhB>Zc#1P
+j+mUsZ%g2S&GE9h(6]7*euFp&4)SMs=*TB0+VaN3fm7Z&^'L\d;@q@mDVC.cG-X5(9_I-.4?Q#]
+Nt-0')gR]?5#c2J#Bg!k*RP6^"8mF"%+Qt]8_aX5&sO(;CUp@J)tZq6-!b-i4Ths'OTNHJae>5?
+f`#!Wis!9l:P?*^3CBD=W0i6k\1EV3T.GY>rcm6E1<=3\QaN^%<hHFZQa<LgMW%Z`'iO4,@10-K
+UrEhL_4WZ""ZSRofn4]0`Qik\*K1.&oO]ijAG/0f_OKb4+e8;FK]]nLpNtH+EW(c)FfC`pB>IQY
+Ii#]B3FUNQ=2sm7cV?R,".Wl^1jfK6/)ta)'u6lQ]"5$q8"3[27(Zhfg4@[NP?:`C'iUZ"B.5I?
+<jB&9MM:^\.G\07hqAuSImBAnL.4UcL)u4eEKI3`4#m_UPlAS<mth:]8k-_r:?sL#,#CVV@`=dt
++VRENki4lCa]!7l5ire_P@1LAeMigT#.HC;G0X1Ud29$!&CKDtnJ?Z;6nJES>JM!cO<P&)gF6G3
+k"mjY@#f)$kK`5:dj^X!-#gGi\Y\nfm0iD(KtdA:IbaJ0mFrY^-X[;'Rh3)UjiY@L*jZNqHu/_9
+9I^M:ZoVE?]uEs,+oY<47C6gi`g$V4O9]5oMV-\i<iSZB.!&R%N]"::$,dN]``m_2j+g?/Q:&+A
+b%Qc"XALt&Hfjn7\SQ>7IC62u%$!DH`s"JuBG@m,=I,'UU:m9Q$!)I?IURrgRqcimbXm:.VCr@;
+23,ChGJ!Z5%;OOj\Ym_bfgCKY?5WTn8e5[KEH*Q?T?2>F?orf*e'";)[1C!R3<F)-EA6Q+1h+q"
+jNq:c-o0?q6r:/=M05'u#'6K2UbQ5O2cNojQaHkZB'9/!U9qk\F+eo6V+@i3&lRa-J#oCA/1M9'
+;KG2GiDta^/!SI)7NiT27B;W9YYh0qP+-Aq]m<l_Z/t;/[+9iK!]/Rb30\$83#GkmE`Ct.]\=C/
+^(m6,*$r$=eZ/j3[8m<;."j1eZS8L.3^Ki>"+)Iu!0(Hb4&/gp_0Ui37jTKNa&JilWJ/CCV<U\K
+WKd65Du_.o`MH.8iXa+2JTW*8.+Trsk@cUO,u.,Jn+oob7t,O9fQ9I4d:0]n/qY)J3g[55qKMP0
+[IqC=d%5P-U*8U]cAFK0nt*-sF%fS#S[#OmV\:s0[Zt(te?.cY]7Y\FpcCLq&KD=)*77u_\Bu.7
+OK*(?G9O$s#oRtSdh;eSXs;:W!.9IOQ=">1NR#9cO$V5c3"9J@*?0b@qnMY`ce.1WChPP%6,Pj<
+1mVE)q#Y:W,:_a>F[_an;Shn''8@i!rU$E\ZGchL-EN3Tej]tB#%^(]$[mjd>OV$7_gf143IO6H
+EjXgG\4j`dF+6I$7Z15KU!Cl9+a3)@Lr6=6ZgW[AdFE3srHl9[*@T,^aYBdeC)rs`e^_+']<-"r
+IP'ck[tVHF`@_2_^l%\AX8tgl^F/jbr!f0qBPD7"/O'Uq;3:\?rUIKd;K`3LoS?#hS`srN%]FT4
+#B!ie'"i[1B^7TTf"Cc.cb]Z?Rdlus[&skkBkdg5Hc=P]elbX=>=o'<4sT2Rk^%#.YO<?U"#,uV
+ZqsLk@n&4RFFIr<&JS(_U?98I,#P!g5<V50:ldXFU+0&W^rlr)b6o5eI42!0rmJji:AAT>3j#XO
++^An,op'rc*Cf%,0CXI'(;c-rX)5<*hu[J^o`a=uCA+BY4)B8I"q13eecgitgb@=VhJtRoNk'As
+G6._VE%V"C\i'm)LLU,"M9qfBHU?>fhpZW>m"q#I6N/3?o6C:On1Hs*"05N#\";tLhfaXCS%4H>
+q*jEHh2J]EEB4t,F:6I\%pBo[Z0+Ve#5aWjnK[88\rMD7Jig:SStctGaP$05J/i+_B-!3NaY\%.
+'F>**rMO*h]`7)u0E3@]Hc,[t\-HoLr]TsSa9TH($c1T55:&-gF<G]BfKpbLf<]tm4Ap1mZp4h@
+FH!tAk[$MkhqN/Hk)m+<2d6d);WapE_?[haVep!'d3Wa_VFjc->8ms_Uo`cfO%NDti_6`3F!Z[H
+k*P8c&o44gY%FYuH*Q_dfR@b#3#+#l.Z''o"f_.QL(@tI3T&H+(!oQbT`o^6TEI8];3d"2:$/I!
+JH7CcI`,PhVl4*@ip)%1Q7U"$6X`i3FadI">jPUK=`u`p0_HJmaOm"T+go())[AA,FjWV'aY[>Q
+$MHAJe1l$!/uI_iB\:XloR)+\VoXmO!-VHs_p+_/+1FJEp=LBLB)\9C2(p8h[/a-SN0CNZ"k$-2
+^`-\/q<\]U5F-V%bc458@FX.an?q"oe2A_FW_Y.sVAEgR%b7'iF^Oho+h@3`P&aq5\q;>>@sXjF
+R%2$D*LAE4lM&.&Q;"B_qhk.#EpY4K"rrsNNN%iDL71#bXu1Ond`5GIK%YIWp1eqY>"X@=.&K=7
+a4@+s]s50]h8m=qE\L:Y>F/5/K7d!ocH=GSccOMV:G;@)(T91Dq$KhSaE!f00FP,`rfhRXKbru:
+;).s#&&k&$H-"^j*c2@.,jJ)`p#a<]2pT0UIWAABs1?/_jpud[qXmM<]Y=BO:Tn.*jK@sZ`PT#(
+a-sktJjlD^_4p)c[cZ^1+Z,lp\uJ<%"")0\?7&[O5u+9WrAPX\W)P0q`%0(\/N]o[BSlsiERm#.
+Vk4D813fF,82_P"_F>F^Ti\WfB)iZQTL`@Y>El&U<#Hu.ks,8[\XBJ#jXA?:=cT4K<$f(Y2EFPY
+7E0_7B0if"(_hQ/\KSfIm"@!q0GoU0Z%l]qWb4<<T:QH=VUW^<5`(i0VQ/K^<5d>qg8c.8FX<^7
+X#?Y0:+=N.)i6Et(WHPldE8p672DfN"Ub(-)aZtth]=lXUCGT;r#oq=+T['kM3Rnod-n@l84-s.
+GtE@BVP4]*JQZ^*Qa@7r^4YJ_/jXF).9Tfa=IO,cWArU2??b&_Y^sUh%h(l0Z\T[h>nBMQPSlXB
+]o/Ir]1/Rgs0j?r"TF8TT+ZDD$ae=&LqF?Ujd@7A$Rdm4!bK+"ZRFXoAH]uFUqfgF/;IZ*?-?YU
+<`)nK!dLPo[*7lq4LJh);QU'OOK-L*c>lTkL@4KRRO?!ebk'p&U!"$\0,b;4!HMsA]\A6H^Ul<1
+YI_HJWm77iP*q!(TLZpri"tmeiMR3[LYd\U[=P>NXGV0TgGD#4>`=Gr:/$Vg`)9#J]S/HdVh9h6
+;WRJZOG?N(<e3poVCJjbb+Lh$/[to=Nl09&G6$Gc+`A[f7\@gOM0H[>2rjKcQI!9Q4R[;S]mK]1
+FM$ka9P8`djIphi/MN)dG^JQ(3aKIs9TXUYf32Kq1Fl*D`Br5$KC3[W*>)u/%.lYc.R7qA^iK%(
+6edYR]+FrfTRQh0kc*jso#/c=h"5\s8oen545_+j=VcKhF=QYrplpAOG]<<JTDiitGi0J@Wq/b_
+B4HUl!^[j[c^\Zo^I[Qt^LDqlGHR/W@YL!(<%.SeRmh;aUN7q8`EH9<;pU]jkbOK\S[\W5CFM!(
+!NVPETdEO+S#8jk/.cn&`>cUb?*AOuj"7J]($4T$J6,ub6;1'eH>Ai9.1u<1WM(u/"6Gl-@a4ef
+"Qp;D?EgD5W#osf#LdAMK?MGG+j-fb+1Uh)[u-F@FG8L9psDDbSi?-R*M(UjqJ\Q#8.O=i)NeiE
+el^iYMoA"H*;8lin$U&g590YR62V7)Q8Wm~>
+endstream
+endobj
+9 0 obj
+<</Type/FontDescriptor/FontName/MUVSLZ+Times-Bold/FontBBox[-24 -19 476 691]/Flags 65568
+/Ascent 691
+/CapHeight 691
+/Descent -19
+/ItalicAngle 0
+/StemV 71
+/MissingWidth 500
+/CharSet(/colon/eight/five/four/one/seven/six/slash/two/zero)/FontFile3 79 0 R>>
+endobj
+79 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 1357>>stream
+Gar>CHVd[Q'`[SRHhRjT+mYCO@/#uXL0P"LPlVV!U4a@O8H`(%0?_5H?l.Il6kPu[5"1Q$Xbfaf
+-%Q-9d=dr381/E^CW>n,:"+`PFL5YMl.k[$V@,1SJ+V'ToDG/#IcjPK:P(!P$7I`6GXl5?c"pK=
+j+K*Y#aYf/;MRoLqm'cFB`#EI5cg&VKjX;@5DHu,j`'i@3"V%E']nWPB%cP=HBYVfai3Tt.#O"F
+:\`8"UsnS<$MV:ID@>ne)6I/.W&4'WS)(qcSS;>pQu+aN.QO9WD6J,%jTYg*==i3,DWY`FD'lU2
+DRVKD0j1bdZ<!HZ.#PEX-;-d[K.F0/b,np?9uh,6Ed<;:_=IU+6HFY92CUXtmCMti)\<?Gb>AOC
++r7:KU$-3d6=D9-j9#.6MAo8fOd(QgOebXM,Yt3j_N>rXE-ZiQ*X\clfk_9q%fB<XqhYdqNjSHU
+<;i$tOs(g.V9nYb_S1\EoG(N:KaikuPp$mWP%[Ymq[d51'M@@-T!7LL$WSb'DbE<.5@AnVT+a#m
+?.U5h")^-;pKX3_fTSt&eKR'J$Ko^ZM/Di,7LELZi1u!%Z9%ecm9T,Ha3L=D4)l/pIGG>YRKZ`P
+F\U+8D__eG^an"XCOR5[AV=4^+q1E'>bEO5KQ*ne%n>,9>I4#FNl2?_VdUT.s7PaiBCR"m*uT8.
+g:aE+=KOIuRS:.a9KtZo1Xc:P^4M,FB8rf-]56,Vorc0ci`FU0b=NDq1/9!(WJLk35q4.*6GN\c
+A/20Q<W4UaTo0YoVTJEca9n)rZf[MU'p6=0Z<FE$LIbPG"\<?*Z'+T5nF29.`+f*R3!;iG=E[II
+Z,0KV#3a7'P`a^B*-q27d&"W]p8R1jP6Eq$fqI$dE8")nW)W4+[%+;:N3TP"HIoRi3RGUJhr*08
+0Ae/,J;3MN+4kWhMq:!#It%UR6hQ'I1lrgpC)/g0\T/WI((n<?I,]p<MBSI=&VoEipuf]W=T^JK
+&\>F0N>@Fu"JW[0#,3_(Um51qB6t$.$cIP0V:b#rg!cs8*brBBkOD7/B.#aO3mSd1K:+#lKQePj
+''akDlp;&]-hXc/]'"hB]d_/j,u$uIL1Lm]?>7cqir+sf#UC$j`=4Xl"Tb;@:#"SY>MsP1eC@c?
+YOblB7"1I39$kf>#K74#B=OFGjfO:[N*X$bbhU3P&jX<s[m$]jcJqW/KobgC:cr4=?S7nde'.UV
+nG)W`=aEZ/ZUV-Y,n(/\VRI=ZAmVR<fU6BBS=Adb(qZp\K'und*MO^JJdnAa96inXT&H^>M:%Hd
+j8?k/%=IDAb4B2`_c7B1USFQ%ZpYSWj:TNt:un=*r.,4m)H%u6lW"'3oFJ+Mnji~>
+endstream
+endobj
+13 0 obj
+<</Type/FontDescriptor/FontName/SFCKYZ+Times-Roman/FontBBox[-70 -218 863 727]/Flags 32
+/Ascent 727
+/CapHeight 674
+/Descent -218
+/ItalicAngle 0
+/StemV 129
+/MissingWidth 500
+/XHeight 460
+/CharSet(/A/M/a/b/c/d/dollar/e/f/four/g/h/hyphen/i/j/k/l/m/n/nine/o/one/p/period/r/s/slash/t/u/w/x/zero)/FontFile3 80 0 R>>
+endobj
+80 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 4495>>stream
+GarVOH!$9^Rf?hfc;>-WBI_Du:iEDJF[K@`['nQFHGKb!6kBAFCka4:+X&?]@6$o0KKof9fY``$
+W4:5)>*gjVYPW1aH`+:%c:kq=bk\c(R:j7dR:lMdH(I-Do&ZD5^@1lG^\@L%=Hq,_MT''#mENij
+jfO?)AuA24ccbR,/GcbWoHO!@,+8FQq?U^G("pg&Mu;5Kc_pFns*k10-SONJH._U!`FcB4Cn9N_
+R3FRG4X32dXdJ=#IpBEuq>^H#3\2g5plOKb<e<8enhSZ?_+U.;Kd*d$Q7\9\Ih3UFlkYL8%gT"j
+'s`e2i0;_j;6'@mCl2>:,^;tZ3)_/f('_Mgrl<qS+X*mf0OJU>AnE,7a:!GoH14RC=E%eiZm`UQ
+S<Ec!="&q5hC+N/EqAi0j=*NQ%duq'V57g8AfVIrY?8=bAG*QCDc"qmC)=:IMPBf@H`7i3QAVG$
+U%VFDe0\oV[@,`8D5F[<gSmD7&QC$`KA&om;tHrSW0aI`MFT7k37R7&U6H07U@,>d_!7BM1TPNH
+J$Pn7*$5](293T0Sf>qf#ss.GVSWSE6Y?qR$(n!a%Ir98S)df;He32@ha,$CF&V:Cs62B$`c9&`
+fA3OmfG<=0X58tYRonl-K&g1"3hqZW9=2YE(&T6qhZ=GO:/AR2U"Uq8a0ReY`BCr:?=qAHC-Kd?
+QGutB,&@K?)XQBjJ3=_^&'(:p7kT,("kLR?]P38Z82',U=<6Nb"?j/mGTedD'Wk<SPsH/1E.PMK
+<BV7TGS$B*eQ+nbi7SV1Fs.Fu'WFstpMNTGJbWts4ZWtU!rS:)EFY_F)6m32!#R9WMG2j_@QouQ
+n"J?X=?YR%L@<gJ8gj5OX!,ZBJ1UV<#nF`Oci+@]nGH9^aX]];PW*`1)-K?e#If/PRas2s.$RI@
+haFs3e'hB:$(+g?]1L\W^tJR5gAgbp4&`ZInbbXN/\QsACUTp?":&f?"2^H7JG/5L]8\L`M%Z:C
+i5'$pYut"\Y!K]=$tXSF`t611SmWZ<-@T\#5J=`X.5rSFGRkWC0ngL6]h1J;qdWt$`Sp@AB/^Am
+f^U&=+,D!+(&6h0%"9;0=a-dr2L5D-_-1WW8$K>.3(ZZB!:;]^,.%b2"rGp,<P$O&`!)h6`4><)
+>*HZqd&=*'3YC^t20fB5h3f^Tr(Z^u-bs8L/P+L[/n2WUleAdaHDOip(3'7&%_F_cE&mn9J&NqU
+YAn[>MM`$6ARub=)j0!OX+l1"p4@mrS;$:(j21Q_++BFs]Tb9!DotFVIaSgB>c-0,<[9*[/8<^0
+_I=/;jOtSR(8fs(aBI(idE]PVAFsu12(uUdrR/r3Glt[5KnR#iD,bYPDZ4=AB7.!DF%n`;lTY7M
+mFNH<`$Vd"C4>(cCo:cgJN&m&aE:HcN<2J(Z,E:Om7g>(/q\_9F9\MVZiHA\/$'I>nA_Be1[_j2
+jND1sF\E2L1j+M_8ppa"Vl@82$1S9,I.Rfu99W#rDYj;YF[NsH.D1AVdR<8hj-dE6]"2l)IR_n=
+^]>ak>$eC&q]X>g,W2RO3a%#9RuLh@Ohib\?k[uSQDhWfncfh$KVTNf583eSUEbcSh1?:f32%HK
+ZDuoSHarKk".s9b[@:LkB$jsA=&FN7K>W5(87g#oa]=V\TQN5$3K=YknkiV^mBd>68<O<"/Z[L6
+@r+TBU)HH+8I0VM2j?<P*6>rdXnDD(.V@9j'kjeTleCFg6Llt35236C6.O'EXRBWNAdJ6akShmL
+N&?E06e/T(UC?ns-)c+5>4#p"!.T=(IPUa4*Rk[?nN6["?fhTbU3D(.;l[5P'nZ79L6Fs:&"j5-
+O/es_34WTZJh&b!8*7GFm2`=s[]7L88t3&Z[aL1PYe.YeoPCu^7^*PfPrk5,aeAjI3YQ)@^pqIL
+8QSY.Dk4B^#^#L8DD"&cE0.&KkSUWo<di"U@T,jl2GYnV.7>jW3d<tn"jlAk_g(T@kZ&0QrJlei
+qd.6u0!6&5)oX2H.l]0F47(SIh:pS#k.A\Q($Mc=(m,_N[0=*MP>SC-aOT]$l'Pok3DkFXen\m5
+3io=b]r4fWGMjk>7M+OAYj=`'6WQ3SL#6tQWOCM`@rjZd_?Y>B%j\[-BJC\U+"7V0=V]dc(_uPR
+`k!mYjaUe#("48q9U6BXXRq$t0.GusK,SeGZ6;22>EU2#Ba!Ec=V#N!F$'j1!RKNie'adal1&d[
+XO"uPiJIHp4s^,\SIcCAmpLL?_##1eTfG9;c?jAR0b3.gCei<77PH+I+U3G2E9f0p:0j;U=ArUo
+2ChrC^T4K5rSltglf-scl%arhPGDF1H:V@jYS+9<NAgJ>$bAD:BJ)[PJ':>5dlo?7bW8<S5A*d,
+8)NCPlj"q<X''@M"FHdFHr@(a?ke[Y%F?])o6(RZ+UN\[bZICjD;gTO,4;oeV\X[^BANjV%<YOH
+OZB=V!?Y;jgX.[9?4(Z%b\9hiMk6A&NV"2$X8=W;:U0H9H6-BR_.a%0apM+.@!X9N>4cr,J.e(a
+q?SC^(td(jaH#3+>5]Tf#m$cL=l!Kh$!9bYA2/AkcF\>P`FJ>bK>InE=['o7d->`\H*1J*@-HI&
+GTQ";]m]Y(ZNjrn?4:a[8O!Es/:';djX"_6Q:.BZPh[LO<#d\&<*Y"L$FfX8I8=a1p2FL,5-uCP
+:l$k;*0P/*@?:c/=c:,F4-qZZ-6W'QEaIT#_4t)Y("=CL^'fFWihcT5`P_O6F182D)j>Q++C/aH
+44`,YQS]'gF6`Em#e%3![gsj/mFi.&9?\"1,aG6.IK79GHqV35U/,mbE:4oj\j2W_=,63/r"\o1
+hFSr[`:(5+r(`b>;XIn<DW9Z&h&\JF70i?P4p#c#ZH@"fp)obj<h4m$b)P@'Okl`bZ\1aSL!jYW
+P%`oINXG*[a5rfaag+_]N4kkUoZmE<YmJ7O^8?@$$sc"M[a@]l2*nL5gfi3`g]Kq"p=`,CV%pC;
+3%Jdk;)IS'lQ5Q*L<qs1@qo*>6XlEc^`+si1nI/*LB1+qe:pr>GpfWTA@p)HG"u/!J)jo/%#t"(
+.C0rsbo-22-l)04A0gS8q;Rh#p[Q#f1Y/1rn4j1oebC##CqR5k"Mo/Ml'mAP*h]W]9pG2Bq&eWN
+g<g@c'>SN8T=r!$-#ZkZ!)EZ[2,fuK\u1oKo/9a:fuiLt4CKm;(=!m#BX=rhWg#LsG(HS1I6DYC
+)';OQ?e:AYc[?jRs7q##[f;*"]gcD[?B0o:>eS*jY!r8K(LpDJ:q0i@`VW^.0!N%#e:G>b(kY(7
+%N"\Hq>!p&>J@#5]rf>=h_#Krd>;CQg?1oo-SL)OLh#X:T#nQ*?_lAW?q=R?G$/'^#NE5E.[_dL
+!OSO_=!orleYR#V6@,-,<RItP/S68/Te&/YRf=7sFnmXr/.DG&DL05#POes<Te=p*N").do9eg2
+k]">28J'/]1>\e=4PX]S1bKn0+1A*dck%9h!ZXmW=j&AXQ?$b$hlaF,OU7><(q"r>'pcA>8QKh(
+b'C8o`s23Yhtlp/G`SEaWbSal'XkVEZC3jQ=]`TkC2&N.X^t1hIh3V-at+a=Ubo*=T3]Tb!As,7
+Vq<Rp9f:]eF1muUjaMuREC;ee`MbYV-Di8`$Ue$0*U!R#Iq$^l;i:3OPfuC/@ICL9K(X?q7s[Dd
+(<.@UX`gm0m&DX4&<[rM%+UqA-:Y-G`*-,_BE[<<J1Pl!c.:QsU1jnLPAM0GOg5#AUXMYY?Xg_W
+7%71NkUOO$T_HAio/M>cc*C.h8S?gjBk`f_fd(]k*)!_/du6ckp^k5^;Et10.P<(u7\H-mm#FA'
+8?*/ZKQe8C)-=`n9,4)`IiNfp21d@3,E0U$`0Jr)5ITk4/H#(Ro!3=X`0/F$T"_AQT"^_tCbJN4
+mV)^.3]\;(gVtOss4G3ag8gA$Y3CHh<l[#_I)a/aAoTIr;5Rnmm1Bq\aD=7H"(_,i4\(^]k?UF;
+d>=aZTh?2^@>ODXLf6Y0lX[`&4GPk<MGZnV&L@Ua?(:KT3#-(r_X,>C9pJKnDD@P8+1(K/-3;d8
+_GPs^lFNuF9=(b"MP3d\Xm1_h3s`,ao8?7@-0k%80?cR3YhiXO5\D5<1O(X#n^?`^rsZ]@mXK>>
+@6-![`On.oW$F"kC*nfOJHs:%+Rk_Epk.a7ZL']6(qA4KT6ZD\et8U`4KRBem)oPpm,Pb*o(C[C
+mp<g`+hSBGYZ5p+i=Xs)9?9HZs3:G.\hM][r):ETZAu/AampF-0B6afP*_Ht8u-`HRWJZk,i$5M
+PDu3DFpXYnSTR($rq4cEZJKrkM;,cT@dX=Vr?5Il_ebG!8Tq4W^h]@#+OVAaai__iaUb.WFJ(?u
+1p':%VRgmeOs.'H*.'a82lIq(E^*>=dnQ+FG6e-TDV+X5&,-KW>)o@6BWuS\lcqXGF-F-n+g(rH
+qGSh;mm47-,qnnb]G$:"$\O'j)W22&RJ12jWsnA\gXFV8<'c#ERuVXO]l%`VS4C<,G!E`3c$j^_
+lG!>!fHTG~>
+endstream
+endobj
+11 0 obj
+<</Type/FontDescriptor/FontName/ZRKBEE+Helvetica-Bold/FontBBox[0 -23 522 724]/Flags 65568
+/Ascent 724
+/CapHeight 724
+/Descent -23
+/ItalicAngle 0
+/StemV 78
+/MissingWidth 500
+/CharSet(/four/one/slash/three/two)/FontFile3 81 0 R>>
+endobj
+81 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 767>>stream
+Gaqcp>t@n&(rtOo4D1R7h#-@]WLL(WV(U$g5qVUN'f26*#:1O]RlbJbc9?2g\;Ro%Ut?PjKV]Kq
+TokFCjMZt6/ei5]4t,Us\qm!\_<rM=GJ"-N"VKQQ4T(f.oC2YqPb3^JL,!gD8jj$06dE::JE"kJ
+>#NY-MEGA!WF:t4H<E%Egt=)P"e@.(c]cU_8/+AF"J^ZAa"X9FWK'4t3\5Wj@9e6WA7(>H])NkW
+g$NtLMZ01):+7H8r-5Er6mO&ioL]%$/+1c#7?NA07u7G`+ma<_-$O7oN)Piki@\8qK>BeU=*N0P
+`eF\%SQ8p?AY3``KMOW,+md"Tn,FU<+ngGgZ)JV76<&n9cjh<F:(*'P;)rAYe''H,"M&E'KijcE
+GBQ6IY$VP5M??p\@?"eteaPP+*K62L\.o+94^5*33S6MdN@J;=cP]PIU;/M,:_)YFP>"<*86<?i
+b\[-r#;CRQYbl=/@'9AnCZrKuAm.9i?:eJ35hR.OETtmBB:6T][UFkJ:n<:Ip'Zn][$2pM:-0I#
+J_UI<(k)O`gAmS+]ETIj&YH"cM7XF^a6pRh5/-4X5jpF'k3Y#6Xl,@apI6Co;0fBprsG&fT!d/2
+b*(((=6:U=-j)icHYP`l1se0l$$aMe<<jV$SbcmZ7dB-[oYP'P7HN,;jl;mac_8K@pEr+kJS3nT
+/lrDJM+:)q[<$G)X,EeY=J@^h@!efL(P*B:%gP8%c5OTAA17t)l2E[Q$jNZa%YdP@J>ug?!CFO%
+MsLOO~>
+endstream
+endobj
+83 0 obj
+<</Type/Metadata
+/Subtype/XML/Length 1420>>stream
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CRLF"?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:Description rdf:about='uuid:524f511b-b27a-11f3-0000-0257219593b0' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.07'/>
+<rdf:Description rdf:about='uuid:524f511b-b27a-11f3-0000-0257219593b0' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2018-06-27T15:59:40-07:00</xmp:ModifyDate>
+<xmp:CreateDate>2018-06-27T15:59:40-07:00</xmp:CreateDate>
+<xmp:CreatorTool>GNU Enscript 1.6.6</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about='uuid:524f511b-b27a-11f3-0000-0257219593b0' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:524f511b-b27a-11f3-0000-0257219593b0'/>
+<rdf:Description rdf:about='uuid:524f511b-b27a-11f3-0000-0257219593b0' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Listing.ps</rdf:li></rdf:Alt></dc:title><dc:creator><rdf:Seq><rdf:li>Wesley Mackey</rdf:li></rdf:Seq></dc:creator></rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+                                                                        
+                                                                        
+<?xpacket end='w'?>
+endstream
+endobj
+2 0 obj
+<</Producer(GPL Ghostscript 9.07)
+/CreationDate(D:20180627155940-07'00')
+/ModDate(D:20180627155940-07'00')
+/Title(Listing.ps)
+/Author(Wesley Mackey)
+/Creator(GNU Enscript 1.6.6)>>endobj
+xref
+0 84
+0000000000 65535 f 
+0000033265 00000 n 
+0000056510 00000 n 
+0000033121 00000 n 
+0000031134 00000 n 
+0000000009 00000 n 
+0000002668 00000 n 
+0000033330 00000 n 
+0000035193 00000 n 
+0000047253 00000 n 
+0000035781 00000 n 
+0000053901 00000 n 
+0000035390 00000 n 
+0000048979 00000 n 
+0000034580 00000 n 
+0000035962 00000 n 
+0000033371 00000 n 
+0000033401 00000 n 
+0000031285 00000 n 
+0000002688 00000 n 
+0000005732 00000 n 
+0000033464 00000 n 
+0000033494 00000 n 
+0000031438 00000 n 
+0000005753 00000 n 
+0000008237 00000 n 
+0000033557 00000 n 
+0000033587 00000 n 
+0000031591 00000 n 
+0000008258 00000 n 
+0000010645 00000 n 
+0000033650 00000 n 
+0000033680 00000 n 
+0000031744 00000 n 
+0000010666 00000 n 
+0000012953 00000 n 
+0000033743 00000 n 
+0000033773 00000 n 
+0000031897 00000 n 
+0000012974 00000 n 
+0000015259 00000 n 
+0000033836 00000 n 
+0000033866 00000 n 
+0000032050 00000 n 
+0000015280 00000 n 
+0000017583 00000 n 
+0000033929 00000 n 
+0000033959 00000 n 
+0000032203 00000 n 
+0000017604 00000 n 
+0000019795 00000 n 
+0000034022 00000 n 
+0000034052 00000 n 
+0000032356 00000 n 
+0000019816 00000 n 
+0000022107 00000 n 
+0000034115 00000 n 
+0000034145 00000 n 
+0000032509 00000 n 
+0000022128 00000 n 
+0000024338 00000 n 
+0000034208 00000 n 
+0000034238 00000 n 
+0000032662 00000 n 
+0000024359 00000 n 
+0000027031 00000 n 
+0000034301 00000 n 
+0000034331 00000 n 
+0000032815 00000 n 
+0000027052 00000 n 
+0000029337 00000 n 
+0000034394 00000 n 
+0000034424 00000 n 
+0000032968 00000 n 
+0000029358 00000 n 
+0000031113 00000 n 
+0000034487 00000 n 
+0000034517 00000 n 
+0000036626 00000 n 
+0000047520 00000 n 
+0000049304 00000 n 
+0000054145 00000 n 
+0000035101 00000 n 
+0000055013 00000 n 
+trailer
+<< /Size 84 /Root 1 0 R /Info 2 0 R
+/ID [<D20DB62CFD942FACB6E93E35854285CF><D20DB62CFD942FACB6E93E35854285CF>]
+>>
+startxref
+56704
+%%EOF

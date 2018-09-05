@@ -1,0 +1,9 @@
+ASG1
+Ian Feekes (#1474914)
+CMPS112
+
+This assignment contains the following files: 
+-README
+-sbi.scm
+
+Note: I didn't reach the stage of implementing if statements or inputs, and my code for goto is a little buggy - sorry if it's a little buggy 

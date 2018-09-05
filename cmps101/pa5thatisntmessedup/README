@@ -1,0 +1,16 @@
+Ian Feekes
+#1474914
+ifeekes@ucsc.edu
+pa5
+readme
+
+This assignment was done without a partner. 
+Files submitted: 
+		README			//shows all the files in programming assignment to be submitted along with description
+		Makefile		//compiles the files
+		List.c			//contains all List functions and accesses
+		List.h			//describes all List functions and accesses for c
+		Graph.h			//
+		Graph.c			//describes all Graph functions and accesses for c
+		GraphTest.c		//checks to make sure all the graph methods are working properly
+		FindComponents.c	//

@@ -1,0 +1,15 @@
+#! /bin/bash
+#------------------------------
+#RunLawn
+#Ian Feekes
+#1474914
+#CMPS11 PTantlo
+#------------------------------
+echo "compiling Lawn.java" #message for the users
+javac Lawn.java >& lawn-errs #compiles lawn.java and throws all its errors away
+echo "running lawn.class"  #message for the users
+Lawn.java < Lawn-input          #compiles input into the input file
+java Lawn > Lawn-out         #compiles output into the output file
+echo "deleting the file lawn.class" 
+rm Lawn.class
+

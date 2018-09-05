@@ -1,0 +1,37 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting bonjour-le-monde.cpp
+bonjour-le-monde.cpp:
+     $Id: bonjour-le-monde.cpp,v 1.9 2018-06-27 15:49:48-07 - - $
+cpplint.py.perl bonjour-le-monde.cpp
+Done processing bonjour-le-monde.cpp
+g++ -g -O0 -Wall -Wextra -fdiagnostics-color=never -std=gnu++17 -Wold-style-cast bonjour-le-monde.cpp -o bonjour-le-monde -lm
+/var/tmp/0/ccHAe3iG.o: In function `draw_french_flag()':
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:26: undefined reference to `glBegin'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:27: undefined reference to `glColor3ubv'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:28: undefined reference to `glVertex2f'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:29: undefined reference to `glVertex2f'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:30: undefined reference to `glVertex2f'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:31: undefined reference to `glVertex2f'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:32: undefined reference to `glEnd'
+/var/tmp/0/ccHAe3iG.o: In function `display()':
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:37: undefined reference to `glClearColor'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:38: undefined reference to `glClear'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:40: undefined reference to `glutSwapBuffers'
+/var/tmp/0/ccHAe3iG.o: In function `adjust_aspect(int, int)':
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:54: undefined reference to `glutReshapeWindow'
+/var/tmp/0/ccHAe3iG.o: In function `reshape(int, int)':
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:61: undefined reference to `glMatrixMode'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:62: undefined reference to `glLoadIdentity'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:63: undefined reference to `gluOrtho2D'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:64: undefined reference to `glMatrixMode'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:65: undefined reference to `glViewport'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:66: undefined reference to `glutPostRedisplay'
+/var/tmp/0/ccHAe3iG.o: In function `main':
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:70: undefined reference to `glutInit'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:71: undefined reference to `glutInitDisplayMode'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:72: undefined reference to `glutInitWindowSize'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:73: undefined reference to `glutInitWindowPosition'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:74: undefined reference to `glutCreateWindow'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:75: undefined reference to `glutDisplayFunc'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:76: undefined reference to `glutReshapeFunc'
+/afs/cats.ucsc.edu/courses/cmps109-wm/Assignments/lab5-x11-opengl/hello-world/bonjour-le-monde.cpp:77: undefined reference to `glutMainLoop'
+collect2: error: ld returned 1 exit status

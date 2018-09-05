@@ -1,0 +1,11 @@
+#!/bin/bash -x
+# $Id: mk-xwds,v 1.8 2018-06-27 15:57:43-07 - - $
+for file in bonjour-le-monde ciao-mondo hallo-welt konnichiwa-sekai \
+            hello-world
+do
+   $file --geometry +500+155 &
+   xwd -frame -out $file.xwd
+   pkill $(echo $file | sed 's/-.*//')
+   convert $file.xwd $file.xwd.ps
+   sleep 5
+done
