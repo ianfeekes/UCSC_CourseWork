@@ -2,9 +2,12 @@ Ian Feekes
 ifeekes
 #1474914
 asg4 
-Note to Graders: Often the script files open to blank files the first
-several times you try to vim into them. May take a few attempts to open. 
-Apologies, I couldn't fix this issue. 
+
+This builds two different executables: cix and cixd, one which acts as
+the daemon, a remote server waiting for user input, and the other which
+allows manipulation of files between a local and remote directory. You can
+have several cix users operating on a single server. 
+
 All work on this assignment done independently (no partner) 
 Files to be submitted include: 
 -cix.cpp 

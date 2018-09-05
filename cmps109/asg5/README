@@ -1,6 +1,11 @@
 Ian Feekes (ifeekes) #1474914
 CMPS109 asg5
 All work for this assignment was done without a partner. 
+
+This builds several executable binaries that display various graphics 
+that allow for basic user interactions with movement and colour changes
+from key input. 
+
 Files to be submitted: 
 -chessboard.cpp
 -circles.cpp

@@ -2,6 +2,11 @@ Ian Feekes
 ifeekes
 #1474914
 All work done independently (No partner)
+This lab builds an executable binary called keyvalue that allows for 
+the user to enter various data values to be stored or removed from a hashtable
+of keys and values. Its primary purpose was an introduction to template functions
+in c++. 
+
 asg3 submission should contain the following files: 
 -main.cpp 
 -listmap.tcc 

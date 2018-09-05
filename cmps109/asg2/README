@@ -2,9 +2,10 @@ CMPS109 Summer 2018
 Ian Feekes
 #1474914
 ifeekes
+This programming assignment builds a basic unix shell that takes in 
+user input to create directories, files, and move throughout them. 
 
 All coding for this assignment was done alone. 
-
 Files to submit: 
 commands.h
 commands.cpp

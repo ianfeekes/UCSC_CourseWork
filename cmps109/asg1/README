@@ -1,0 +1,5 @@
+Asg1 ydc 
+All coding was done alone by Ian Feekes (ifeekes #1474914). 
+cmps109 summer 2018. 
+This programming assignment builds an executable binary called "ydc" 
+that allows for the excact usage of unix dc function without registers. 

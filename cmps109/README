@@ -1,0 +1,10 @@
+This directory contains all work done for cmps109 advanced programming in c++. 
+It should contain the following directories: 
+-lab0 (helloworld solely for testing unix submissions in this class) 
+-labGL(introductory opengl lab in c++)
+-asg1 (dc calculator in c++)
+-asg2 (simple shell in c++)
+-asg3 (key value hashing in c++)
+-asg4 (daemon server in c++)
+-asg5 (opengl graphics in c++)
+
