@@ -1,5 +1,0 @@
-co  RCS/scanner.mll,v scanner.mll
-ocamllex scanner.mll
-6 states, 267 transitions, table size 1104 bytes
-ocamlc -c scanner.ml
-ocamlc bigint.cmo scanner.cmo maindc.cmo -o ocamldc
