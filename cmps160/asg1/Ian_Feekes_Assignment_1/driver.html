@@ -1,0 +1,49 @@
+<html lang="en">
+ <!-- Ian Feekes
+      ifeekes@ucsc.edu
+      #1474914       
+      cmps160 asg1      --> 
+
+  <head>
+      <meta charset="utf-8"/>
+      <title> Ian Feekes's Assignment 1 </title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+  <body onload = "main()">
+    <p> Assignment 1 </p>
+
+    <!-- YOUR CODE HERE -->
+    <canvas id="can" width = "500" height = "500" > </canvas>
+
+    <p id = "coordBox"> </p> 
+
+    <p><button type="button" id="clearButton">Clear Canvas</button> </p>
+    <p>Point Color: </p>
+    <p> 
+      <!--The following three lines are for the red, green and blue sliders as specified --> 
+       <div class="slidecontainer"> Red: <input type="range" min="0" max="100" value="50" class="slider" id="redSlider"> 
+       Green:  <input type="range" min="0" max="100" value="50" class="slider" id="greenSlider"> 
+       Blue:   <input type="range" min="0" max="100" value="50" class="slider" id="blueSlider"> </div>
+      <!--Point range slider --> </p>
+    <p> 
+       <div class="slidecontainer"> Point Size <input type="range" min="1" max ="100" value="50" class="slider" id="sizeSlider"> </div>
+    </p>
+
+  </body>
+</html>

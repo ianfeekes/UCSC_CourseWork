@@ -1,0 +1,55 @@
+<!--Ian Feekes
+    #1474914
+    ifeekes@ucsc.edu 
+  -->
+<html lang="en">
+  <head>
+      <meta charset="utf-8"/>
+      <title>Virtual Rave Maze</title>
+
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/cuon-utils.js"></script>
+      <script src = "lib/cuon-matrix.js"></script>
+      <script src = "lib/load-file.js"></script>
+      <script src = "lib/updated-cuon-utils.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+      <!-- Include tick function -->
+      <script src = "prog/tick.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include scene objects -->
+      <script src = "prog/scene/scene.js"></script>
+      <script src = "prog/scene/vertex.js"></script>
+      <script src = "prog/scene/geometry.js"></script>
+
+      <!-- Include animated geometric objects -->
+      <script src = "prog/geometries/animated/cube.js"></script>
+      <script src = "prog/geometries/animated/lcube.js"></script>
+      <script src = "prog/geometries/animated/rcube.js"></script>
+
+      <!-- OBJ Loading -->
+      <script src = "lib/obj_loading/webgl-obj-loader.js"></script>
+      <script src = "lib/obj_loading/loadedOBJ.js"></script>
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+  <!--Resize html function taken from book, otherwise use main for initialization--> 
+  <body onresize='resize()' onload = 'main()''>
+  <!--  <br>Camera Speed<br> -->
+
+    <!--Display canvas element--> 
+    <canvas id="canvas"></canvas>
+    <p id="textBox"> </p>
+  </body>
+</html>

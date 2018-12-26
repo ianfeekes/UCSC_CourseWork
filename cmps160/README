@@ -1,0 +1,12 @@
+This is the parent directory for cmps160: Computational Graphics 
+Ian Feekes
+ifeekes@ucsc.edu
+#1474914
+
+ASG1: Using webgl to create a canvas with points of different colours and sizes 
+ASG2: Updating to allow for drawing of shapes (familiarization of object oriented parts of js)
+ASG3: Shapes now animate and behave differently 
+ASG4: Texturing shapes and colouring for each pixel. 
+ASG5: Camera projection shifting
+ASG6: Lighting, phong shaders
+ASG7: Final creative project. Maze with collision, colour blending, and colour-picking. 

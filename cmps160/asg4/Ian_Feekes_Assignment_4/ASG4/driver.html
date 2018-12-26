@@ -1,0 +1,113 @@
+<html lang="en">
+<!-- Ian Feekes
+      ifeekes@ucsc.edu
+      #1474914       
+      cmps160 asg4     
+      working copy: not from downloads folder  --> 
+
+  <head>
+      <meta charset="utf-8"/>
+      <title> Ian Feekes's Assignment 4</title>
+      <!-- Include external libraries -->
+      <script src = "lib/webgl-utils.js"></script>
+      <script src = "lib/webgl-debug.js"></script>
+      <script src = "lib/updated-cuon-utils.js"></script>  
+      <script src = "lib/cuon-matrix.js"></script>
+      <!-- Added the file loading function from library --> 
+      <script src = "lib/load-file.js"></script>
+
+      <!-- Include main program -->
+      <script src = "prog/main.js"></script>
+
+      <!-- Include tick function -->
+      <script src = "prog/tick.js"></script>
+
+      <!-- Include internal functions -->
+      <script src = "prog/eventFunctions.js"></script>
+      <script src = "prog/glslFunctions.js"></script>
+      <script src = "prog/htmlFunctions.js"></script>
+
+      <!-- Include scene objects -->
+      <script src = "prog/scene/scene.js"></script>
+      <script src = "prog/scene/vertex.js"></script>
+      <script src = "prog/scene/geometry.js"></script>
+
+      <!-- Include geometric objects -->
+      <script src = "prog/geometries/circle.js"></script>
+      <script src = "prog/geometries/square.js"></script>
+      <script src = "prog/geometries/triangle.js"></script>
+
+       <!-- OBJ Loading -->
+      <script src = "lib/obj_loading/webgl-obj-loader.js"></script>
+      <script src = "lib/obj_loading/loadedOBJ.js"></script>
+
+      <!-- Include animated geometric objects -->
+      <script src = "prog/geometries/animated/randomCircle.js"></script>
+      <script src = "prog/geometries/animated/spinningSquare.js"></script>
+      <script src = "prog/geometries/animated/fluctuatingTriangle.js"></script>
+      <script src = "prog/geometries/animated/tiltedCube.js"></script>
+      <script src = "prog/geometries/animated/checkerCube.js"></script>
+      <script src = "prog/geometries/animated/texturedCube.js"></script>
+      <script src = "prog/geometries/animated/rotatingObject.js"></script> 
+
+      <!-- Include shaders -->
+      <script src = "prog/shaders.js"></script>
+  </head>
+
+  <body onload = "main()">
+    <p> Assignment 4 </p>
+
+    <!-- YOUR CODE HERE -->
+    <canvas id="can" width="500" height ="500"> </canvas>
+
+     <p id = "coordBox"> </p> 
+
+    <div>
+      <button type="button" id="clearButton">Clear Canvas</button>
+
+    </div>
+
+    <div> 
+      <label for="file"> Set OBJ: </label> <input type = "file" id="objFile" name="objFile"> 
+      <label for="file"> Set Texture Image: </label> <input type = "file" id="textureImage" name="textureImage"> 
+      <button type="button" id="addGeometryToScene">Add Geometry To Scene</button> 
+    </div>
+
+   <p> 
+      Drawing Mode: <br/>
+      <button type="button" id="squareButton">Spinning Squares</button>
+      <button type ="button" id="triangleButton">Fluctuating Triangles</button>
+      <button type = "button" id="circleButton">Randomly Moving Circles</button>
+      <button type = "button" id="cubeButton">Tilted Cube</button>
+   </p>
+
+    <p> 
+      <!--The following three lines are for the red, green and blue sliders as specified --> 
+       <div class="slidecontainer"> 
+         Shape Color: <br/> 
+         
+         <input type="button" value="Solid Color D:" id=colorButton> 
+
+         Red: <input type="range" min="0" max="100" value="50" class="slider" id="redSlider"> 
+         Green:<input type="range" min="0" max="100" value="50" class="slider" id="greenSlider"> 
+         Blue: <input type="range" min="0" max="100" value="50" class="slider" id="blueSlider"> </div>
+      <!--Point range slider --> </p>
+    <p> 
+       <div class="slidecontainer"> Shape Size <input type="range" min="1" max ="100" value="25" class="slider" id="sizeSlider"> 
+          (Circles) Segment Count <input type = "range" min="6" max="50" value="25" class = "slider" id="segmentSlider"> 
+       </div>
+    </p>
+
+    <p>
+      NOTE TO THE GRADERS: This is my resubmission of assignment 4 in an attempt to get back points for the
+      <br> following parts of the rubric: <br> 
+      -Initializing canvas with a cube that has textures applied to its faces in different ways <br> 
+      -Texture cubes are drawn with textures applied if a texture as been loaded <br> 
+
+      NOTE: This only works with locally-stored files. I have moved all the texture files in external folder
+      <br> into the local directory, so all given texture files should work on this assignment, but most <br> others will fail to load due to security purposes. <br> 
+      I failed to get the loaded objects to properly render. I want to start on asg 5 so I'm not going to <br> work with them until later. 
+    </p>
+
+  </body>
+</html>
