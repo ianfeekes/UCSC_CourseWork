@@ -18,3 +18,6 @@ class taken at UCSC. The classes are as follows:
 	     written in C for more experience 
 -cmps160: computational graphics. All coding done in javascript, 	   to easily view this work you can go to 
 	  people.ucsc/~ifeekes  for each assignment 
+
+NOTE: The github says that my UCSC coursework involves an 
+overwhelming amount of javascript. This is not true. Most coursework has been done in C, java, and C++ respectively. 
