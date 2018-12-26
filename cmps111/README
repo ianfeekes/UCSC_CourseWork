@@ -1,0 +1,14 @@
+This is the main directory for my cmps111 (operating systems) coursework. 
+Each child directory should have a readme and a design document specifying the work and usage
+more specifically. 
+For assignments 2 and 3 I worked with a partner, Enes Yazgan (awesome guy), and the rest were
+done independently. 
+This main directory should contain the following: 
+
+-assgn0: Tail program in c written using system calls, functional on freeBSD
+-assgn1: Simple shell in c, should work for all system calls, including pipelining
+-assgn2: All modified and new files to implement priority scheduling and splatter (random) 
+         scheduling on freeBSD
+-assgn3: All modified and new files to implement FIFO page replacement on freeBSD
+-assgn4: FUSE module used to build a FAT-based file system on freeBSD. requires FUSE installation
+         to run program. 

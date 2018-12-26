@@ -1,0 +1,14 @@
+This is the readme for Ian Feekes (ifeekes@ucsc.edu, #1474914) cmps111 assgn1 directory. 
+The purpose of this assignment was to build a simple shell. This assignment was completed without a programming partner (all work was done alone).
+This directory should contain the following files: 
+-lex.l                 File that allows for argument processing
+-myshell.c             Builds the shell with system calls on line arguments
+-Makefile              Compiles lex.l and myshell.c to create myshell exec.
+-README                Assignment details 
+-DESIGN.txt            Describes the design of the assignment
+
+To my knowledge everything, including the pipelining performs as desired. 
+There shouldn't be any weird quirks or conditions to the program. It outputs 
+myshell: as the command prompt, which is different from the freebsd $: prompt
+but this can easily be changed - I kept it that way so that assessing the program
+becomes easier. 

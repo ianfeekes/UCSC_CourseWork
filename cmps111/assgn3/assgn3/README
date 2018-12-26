@@ -1,0 +1,17 @@
+
+
+Ian Feekes #1474914 (ifeekes@ucsc.edu) [Team Captain]
+Partner: Enes Yazgan #1536353 (eiyazgan@ucsc.edu)
+
+	Throughout this assignment we worked side by side throughout almost the entirity 
+of the work. As such, it is difficult to necessarily attribute specific pieces of 
+work to one individual. 
+	For my time driving, I modified some of the behavior to the inactive queues 
+and active queues in the pageout_scan() methods, Enes was driving for the logging
+and analyzing of variables, along with other parts of the inactive queue FIFO
+implementation. 
+	For the documentation, Enes worked more on the design doc and with documenting 
+our data and making it into graphs, whereas I worked more on the results doc and 
+used my faster computer for benchmarking. 
+	In my eyes, we both put in equal work on this assignment. He was a great teammate
+and deserves full credit. 

@@ -1,0 +1,25 @@
+Ian Feekes
+#1474914
+ifeekes@ucsc.edu
+cmps111 asg4 
+FAT FUSE
+
+The gitlab should be on the assignment4 branch, and it should contain the following: 
+-README
+-DESIGN.pdf
+-case1	(all necessary files for 512B file system)
+	-directory.h (specifies directory structure)
+	-fatblock.h	 (specifies fatblock structure)
+	-diskReader.c(reads a disk image executable)
+	-superblock.h(specifies superblock structure)
+	-fatMain.c   (builds a disk image executable)
+	-littleBlock.c(incomplete: implementations of FUSE functionality)
+	-Makefile	 (creates executables to benchmark file system)
+-case 2  (all necessary files for 8KB file system)
+	-directory.h (specifies directory structure)
+	-fatblock.h	 (specifies fatblock structure)
+	-diskReader.c(reads a disk image executable)
+	-superblock.h(specifies superblock structure)
+	-fatMain.c   (builds a disk image executable)
+	-bigBlock.c(incomplete: implementations of FUSE functionality)
+	-Makefile	 (creates executables to benchmark file system)

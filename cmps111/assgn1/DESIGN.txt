@@ -1,0 +1,74 @@
+Ian Feekes
+ifeekes@ucsc.edu
+#1474914
+cmps111 assgn1 
+DESIGN.txt 
+
+HOW IT WORKS:
+	NOTE: most of my code should be relatively well-documented with what functions do and 
+how they behave above the function body. 
+	lex does a lot of heavy lifting with processing arguments. The main function in myshell 
+starts up an infinite loop, which only ever closes if the user types exit. It tests to make sure
+the line actually contains something and then forks. It checks the process ID to see what it should
+do. Parent processes just wait for their child to finish everything, and child processes execute
+whatever the command is. It has no arguments.
+	Doomsday is called whenever the alarm for a process ID has surpassed the "max time" value
+which in this program is defined as 15 seconds. Doomsday murders a process and prints out that it
+has surpassed its time. This can be tested using loopFile in the cTestFiles directory. It is invoked
+whenever the alarm is up. 
+	Execute arguments iterates through args looking for special characters > < or | and calls
+functions to handle each character. At the end it calls execvp to do whatever the user has typed 
+in, and then exits the process. It has no arguments, but accesses a lot of global variables. 
+	RedirectInput has no arguments. It is caled every time execute arguments detects  a '<' 
+character in args. It essentially just checks to make sure there will be no errors or seg faults, 
+and then opens a file descriptor towards the next argument so that a command like "sort < file" 
+will open up file. It calls dup2 to direct input properly, and then re-arranges the arguments so
+that other processing will behave normally. It assumes that it is handling a child process of the
+main function, so it needs to exit every time it encounters a road-bump in formatting.   
+	RedirectOutput behaves very similarly to redirectInput. It also takes no arguments, and is
+called every time a '>' character is detected in the arguments. It checks to see if '>>' is entered
+with the next argument after looking for errors or invalid usage. In the case of '>>' it opens the
+file two arguments ahead of where the first '>' was detected and calls lseek to move to the end of 
+the file to append data. Else if '>' it opens with the O_TRUNC flag to wipe the file first (because
+there was a bug where it would only overwrite the beginning set of data), and rearranges the arguments
+properly. Then all that is necessary is to call dup2 for output direction and close the file descriptor
+and it will eventually be properly executed by execute arguments which called the function. 
+	Process pipeline was the most difficult function to write. I used the lecture to model the
+system calls used, but it only forks once per pipeline. For the child process, it calls dup2 to the
+last index of the pipe descriptor and nullifies all arguments afterwards, because it only wants to 
+execute the first part. The parent process calls dup2 for the first index of the pipe descriptor, 
+closes it, waits, and then rearranges the args to shift the arguments on the right side of the pipe
+character (everything after '|') towards the front of the args array. It then changes the global 
+argSize variable, which was one of the toughest bugs to figure out: because otherwise it would try
+to iterate through several null arguments and would execute nothing inexplicably. It then recursively
+calls executeArguments on the newly rearranged *args list. It takes no arguments and returns nothing.  
+
+DIFFICULTIES: 
+	I largely just jumped into this assignment without knowledge of many of the essential
+system calls needed to complete it, which resulted in having to become very proficient
+in the system calls while I was coding, which took a lot more time than I had intended
+and let to a lot of silly bugs. 
+	Originally I never had an execute function - it was all just built into the main function, 
+so when I figured out that pipelining would require the possibility of doing the same thing
+over and over again, it took a while to convert a huge portion of the main() function into 
+execute, which was poorly thought out. 
+	Initially, arguments were executed through i=0;args[i]!=NULL;i++ even though I held a global
+variable called argSize which was used for pipelining and a lot of debugging printf's, and 
+this led to a lot of discord as certain functions would set arguments to null and would fail to 
+execute with very little signal as to why this was. The transition to eventually using argSize was 
+slow, and I forgot to do it with certain functions, so input redirection would inexplicably fail when
+it had been previously working seamlessly, which was very frustrating. 
+	This assignment took well over 20 hours, and was very challenging, but through it I feel that
+I have become a lot more familiar with system calls and comfortable with c.  
+
+DATA STRUCTURES USED: 
+	Aside from all buffers used in system calls, and setting up an alarm, the only data structure
+I used that comes to mind is the args array, which is relatively trivial to wrap your head around. 
+
+NON-TRIVIAL-ALGORITHMS: 
+	While understanding the system calls was a major pain, most of the algorithmic behavior of 
+myshell is relatively straightforward. Pipelining was probably the most complicated because my entire
+main() function needed to be rearranged, but if you understand the recursion involved with pipelining
+and executing each side of the pipe it's basic recursion. Forking is also difficult to wrap your head
+around, but with statements to determine the pid it quickly becomes doable. 
+

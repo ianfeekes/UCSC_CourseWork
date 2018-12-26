@@ -1,0 +1,8 @@
+Ian Feekes
+#1474914
+ifeekes@ucsc.edu
+
+This directory cTestFiles is used for testing command line execution with myshell. 
+None of the files should count towards the assignment, but they can still be accessed
+through my gitlab so I figured I would put in a README in case the graders stumble into my 
+directory of strange test files. 
